@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2027年俄罗斯冬季13天旅行计划：莫斯科、圣彼得堡、摩尔曼斯克与捷里别尔卡">
+  <meta name="robots" content="noindex,nofollow">
+  <title>俄罗斯冬季13天行程计划｜2027</title>
+  <style>
+    :root {
+      --ink:#1c1c1e; --ink-soft:#595d6c; --deep:#050038; --blue:#4262ff;
+      --blue-soft:#f5f3ff; --ice:#eaf7fb; --sun:#ffd02f; --paper:#fff;
+      --surface:#f7f8fa; --line:#e2e4ea; --rose:#fde0f0; --orange:#ffe6cd;
+      --sage:#c3faf5; --shadow:0 14px 36px -10px rgba(5,0,56,.14);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Roobert PRO","Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; }
+    a { color:var(--blue); text-underline-offset:3px; }
+    button { font:inherit; }
+    .wrap { width:min(1180px,calc(100% - 48px)); margin:0 auto; }
+    .toolbar { position:sticky; top:0; z-index:20; border-bottom:1px solid var(--line); background:rgba(255,255,255,.94); backdrop-filter:blur(14px); }
+    .toolbar-inner { display:flex; align-items:center; gap:8px; min-height:60px; overflow-x:auto; scrollbar-width:none; }
+    .toolbar a,.toolbar button { flex:0 0 auto; padding:9px 14px; border:0; border-radius:999px; color:var(--ink); background:transparent; text-decoration:none; cursor:pointer; font-size:13px; font-weight:700; }
+    .toolbar a:hover { background:var(--blue-soft); }
+    .toolbar .print { margin-left:auto; color:#fff; background:var(--deep); }
+    .hero { position:relative; overflow:hidden; padding:88px 0 66px; }
+    .hero::before { content:""; position:absolute; width:440px; height:440px; right:-170px; top:-250px; border-radius:50%; background:var(--ice); }
+    .eyebrow { color:var(--blue); font-size:12px; font-weight:900; letter-spacing:.15em; text-transform:uppercase; }
+    h1 { max-width:1040px; margin:14px 0 12px; color:var(--deep); font-size:clamp(48px,6.4vw,82px); font-weight:500; line-height:1.04; letter-spacing:-.04em; }
+    .hero-lead { max-width:850px; margin:0; color:var(--ink-soft); font-size:clamp(20px,2vw,28px); }
+    .flight-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:46px; }
+    .flight { min-height:154px; padding:28px; border-radius:20px; color:#fff; background:var(--blue); }
+    .flight span { display:block; font-size:13px; font-weight:700; letter-spacing:.04em; }
+    .flight strong { display:block; margin:8px 0 12px; font-size:27px; font-weight:500; }
+    .flight small { color:rgba(255,255,255,.78); }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+    .stat { padding:20px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+    .stat b { display:block; color:var(--deep); font-size:22px; font-weight:500; }
+    .stat span { color:#6b6f7e; font-size:13px; }
+    section { padding:82px 0 0; scroll-margin-top:72px; }
+    h2 { margin:0; color:var(--deep); font-size:clamp(31px,4vw,46px); line-height:1.15; letter-spacing:-.03em; }
+    .section-lead { max-width:820px; margin:12px 0 30px; color:var(--ink-soft); }
+    .route-card,.panel { padding:30px; border:1px solid var(--line); border-radius:24px; background:#fff; box-shadow:var(--shadow); }
+    .route-card { margin-top:18px; }
+    .route-flow { display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr; align-items:center; gap:14px; margin-top:24px; }
+    .route-city { min-height:150px; padding:22px; border-radius:18px; background:var(--surface); }
+    .route-city.primary { color:#fff; background:var(--blue); }
+    .route-city b { display:block; margin-bottom:7px; font-size:20px; }
+    .route-city span { display:block; font-size:13px; opacity:.76; }
+    .route-arrow { color:var(--blue); font-size:28px; font-weight:800; }
+    .trip-overview { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+    .overview-step { min-height:132px; padding:18px; border-radius:16px; background:var(--surface); }
+    .overview-step b { display:block; margin-bottom:8px; color:var(--blue); font-size:14px; }
+    .overview-step span { color:var(--ink-soft); font-size:13px; line-height:1.5; }
+    .day-nav { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-top:18px; }
+    .day-nav a { padding:11px 8px; border:1px solid var(--line); border-radius:13px; color:var(--ink); background:#fff; text-align:center; text-decoration:none; }
+    .day-nav b,.day-nav span { display:block; }
+    .day-nav b { color:var(--blue); }
+    .day-nav span { font-size:11px; }
+    .timeline { display:grid; gap:26px; }
+    .day { overflow:hidden; border:1px solid #eef0f3; border-radius:28px; background:#fff; scroll-margin-top:78px; }
+    .day-head { display:grid; grid-template-columns:96px 1fr auto; gap:22px; align-items:center; padding:32px; border-bottom:1px solid #eef0f3; }
+    .date { width:82px; padding:16px 10px; border-radius:16px; color:var(--deep); background:var(--blue-soft); text-align:center; }
+    .date b { display:block; font-size:24px; line-height:1.1; }
+    .date span { font-size:11px; font-weight:700; }
+    .day-title h3 { margin:0 0 4px; color:var(--deep); font-size:27px; font-weight:500; line-height:1.2; }
+    .day-title p { margin:0; color:var(--ink-soft); font-size:14px; }
+    .pace { min-width:145px; padding-left:20px; border-left:1px solid var(--line); text-align:right; }
+    .pace b { display:block; color:var(--blue); font-size:20px; font-weight:500; }
+    .pace span { color:#6b6f7e; font-size:11px; }
+    .day-body { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(270px,.65fr); gap:26px; padding:30px; }
+    .chips { display:flex; flex-wrap:wrap; gap:7px; margin:0 0 22px; }
+    .chip { padding:6px 10px; border:1px solid #eef0f3; border-radius:999px; color:var(--ink-soft); background:var(--surface); font-size:12px; font-weight:800; }
+    .agenda { position:relative; display:grid; margin:0; padding:0; list-style:none; }
+    .agenda::before { content:""; position:absolute; left:65px; top:11px; bottom:12px; width:2px; background:var(--blue-soft); }
+    .agenda li { position:relative; display:grid; grid-template-columns:52px 1fr; gap:28px; padding:0 0 20px; }
+    .agenda li:last-child { padding-bottom:0; }
+    .agenda li::before { content:""; position:absolute; left:59px; top:8px; width:12px; height:12px; border:3px solid #fff; border-radius:50%; background:var(--blue); box-shadow:0 0 0 2px var(--blue-soft); }
+    .agenda time { color:var(--blue); font-size:13px; font-weight:800; text-align:right; }
+    .agenda b { display:block; color:var(--deep); }
+    .agenda p { margin:3px 0 0; color:var(--ink-soft); font-size:14px; }
+    .side { display:grid; align-content:start; gap:12px; }
+    .callout { padding:17px 18px; border-radius:16px; background:var(--surface); }
+    .callout.important { background:#fff0c9; }
+    .callout.flex { background:var(--blue-soft); }
+    .callout.ice { background:var(--ice); }
+    .callout h4 { margin:0 0 6px; color:var(--deep); font-size:14px; }
+    .callout p { margin:0; font-size:13px; }
+    .tag { display:inline-block; margin-bottom:7px; color:var(--blue); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+    .gallery { padding:0 30px 30px; }
+    .gallery-inner { padding-top:22px; border-top:1px solid #eef0f3; }
+    .gallery-head { display:flex; justify-content:space-between; gap:16px; align-items:center; margin-bottom:12px; }
+    .gallery-head h4 { margin:0; color:var(--deep); font-size:16px; }
+    .folder { color:var(--blue); font-size:12px; font-weight:700; }
+    .photo-strip { display:flex; gap:10px; overflow-x:auto; overflow-y:hidden; padding-bottom:8px; scroll-snap-type:x proximity; scroll-behavior:smooth; cursor:grab; scrollbar-width:thin; }
+    .photo-strip.dragging { cursor:grabbing; scroll-behavior:auto; scroll-snap-type:none; }
+    .photo-button { position:relative; flex:0 0 calc((100% - 20px)/3); min-width:210px; overflow:hidden; aspect-ratio:1.48; padding:0; border:0; border-radius:14px; background:var(--surface); cursor:zoom-in; scroll-snap-align:start; }
+    .photo-button img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .24s ease,filter .24s ease; }
+    .photo-button:hover img,.photo-button:focus-visible img { transform:scale(1.035); filter:saturate(1.05); }
+    .photo-button span { position:absolute; right:9px; bottom:8px; max-width:calc(100% - 18px); padding:4px 8px; border-radius:999px; color:#fff; background:rgba(5,0,56,.74); font-size:10px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .photo-button::after { content:"点击查看大图 ↗"; position:absolute; top:9px; right:9px; padding:4px 8px; border-radius:999px; color:#fff; background:rgba(5,0,56,.68); font-size:10px; font-weight:700; opacity:0; transform:translateY(-3px); transition:opacity .18s ease,transform .18s ease; pointer-events:none; }
+    .photo-button:hover::after,.photo-button:focus-visible::after { opacity:1; transform:none; }
+    .photo-placeholder { display:grid; place-items:center; min-height:150px; padding:18px; border:1px dashed #b9becb; border-radius:14px; color:#7b8090; background:var(--surface); text-align:center; font-size:12px; }
+    .photo-placeholder b { display:block; margin-bottom:4px; color:var(--deep); font-size:14px; }
+    .lightbox { position:fixed; inset:0; z-index:100; display:none; place-items:center; padding:28px; color:#fff; background:rgba(5,0,56,.92); }
+    .lightbox.open { display:grid; }
+    .lightbox-figure { width:min(1040px,100%); margin:0; text-align:center; }
+    .lightbox-figure img { display:block; width:100%; max-height:78vh; object-fit:contain; border-radius:18px; background:#16133d; box-shadow:0 24px 70px rgba(0,0,0,.38); }
+    .lightbox-caption { margin-top:12px; color:#fff; font-size:14px; }
+    .lightbox-count { display:block; margin-top:3px; color:rgba(255,255,255,.64); font-size:11px; }
+    .lightbox-close,.lightbox-nav { position:absolute; border:0; color:#fff; background:rgba(255,255,255,.14); cursor:pointer; backdrop-filter:blur(8px); }
+    .lightbox-close { top:20px; right:20px; width:42px; height:42px; border-radius:50%; font-size:24px; }
+    .lightbox-nav { top:50%; width:48px; height:64px; border-radius:16px; transform:translateY(-50%); font-size:30px; }
+    .lightbox-prev { left:20px; } .lightbox-next { right:20px; }
+    body.lightbox-open { overflow:hidden; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:20px; }
+    table { width:100%; min-width:850px; border-collapse:collapse; }
+    th,td { padding:15px 17px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:#fff; background:var(--deep); font-size:12px; }
+    td { font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .todo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .todo { padding:24px; border-radius:28px; background:var(--surface); }
+    .todo:nth-child(4n+1){background:#fff8e0}.todo:nth-child(4n+2){background:var(--sage)}.todo:nth-child(4n+3){background:var(--rose)}.todo:nth-child(4n+4){background:var(--orange)}
+    .todo h3 { margin:0 0 10px; color:var(--deep); font-size:19px; }
+    .todo ul { margin:0; padding-left:19px; }
+    .sources { display:grid; grid-template-columns:repeat(2,1fr); gap:10px 18px; margin:0; padding:0; list-style:none; }
+    .sources li { padding:13px 15px; border:1px solid var(--line); border-radius:13px; font-size:13px; }
+    footer { margin-top:86px; padding:38px 0; color:#ccd1ec; background:var(--deep); text-align:center; font-size:12px; }
+    @media(max-width:900px){.route-flow{grid-template-columns:1fr}.route-arrow{transform:rotate(90deg);text-align:center}.trip-overview{grid-template-columns:repeat(2,1fr)}.day-body{grid-template-columns:1fr}.day-nav{grid-template-columns:repeat(4,1fr)}.todo-grid{grid-template-columns:1fr}.sources{grid-template-columns:1fr}}
+    @media(max-width:680px){.wrap{width:min(100% - 28px,1180px)}.hero{padding:58px 0 42px}.flight-grid,.stats{grid-template-columns:1fr}.day-head{grid-template-columns:78px 1fr;gap:14px;padding:22px 18px}.date{width:74px}.day-title h3{font-size:22px}.pace{grid-column:1/-1;text-align:left}.day-body{padding:22px 18px}.gallery{padding:0 18px 22px}.photo-button{flex-basis:78%;min-width:220px}.lightbox{padding:16px}.lightbox-nav{top:auto;bottom:18px;width:44px;height:44px;border-radius:50%;transform:none}.lightbox-prev{left:calc(50% - 54px)}.lightbox-next{right:calc(50% - 54px)}.day-nav{grid-template-columns:repeat(3,1fr)}.trip-overview{grid-template-columns:1fr}.toolbar .print{margin-left:0}}
+    @media print{@page{size:A4;margin:12mm}.toolbar,.gallery,footer{display:none!important}.wrap{width:100%}.hero{padding:10mm 0}.day{break-inside:avoid}.day-head{padding:14px}.day-body{padding:16px;grid-template-columns:1.5fr .7fr}section{padding-top:8mm}}
+  </style>
+</head>
+<body id="top">
+  <nav class="toolbar" aria-label="页面导航"><div class="wrap toolbar-inner">
+    <a href="#route">路线地图</a><a href="#overview">路线总览</a><a href="#days">每日行程</a><a href="#hours">开放时间</a><a href="#todo">预订清单</a><a href="#sources">核对入口</a>
+    <button class="print" type="button" onclick="window.print()">打印 / 存为 PDF</button>
+  </div></nav>
+
+  <header class="hero"><div class="wrap">
+    <span class="eyebrow">Russia · Winter 2027</span>
+    <h1>俄罗斯冬季13天行程计划</h1>
+    <p class="hero-lead">莫斯科 × 圣彼得堡 × 摩尔曼斯克 × 捷里别尔卡</p>
+    <div class="flight-grid">
+      <div class="flight"><span>去程 · 2月4日</span><strong>15:30 抵达莫斯科</strong><small>深圳出发｜抵达日保留半天，只安排红场夜景</small></div>
+      <div class="flight"><span>返程 · 2月15日</span><strong>19:10 莫斯科出发</strong><small>2月16日抵达深圳｜回程日期需 +1 天</small></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>13 天</b><span>2/4—2/16</span></div><div class="stat"><b>3 天请假</b><span>2/4、2/15、2/16</span></div><div class="stat"><b>4 个目的地</b><span>城市、人文与北极圈</span></div><div class="stat"><b>2 次追光</b><span>降低天气不确定性</span></div>
+    </div>
+    <div class="route-card" id="route">
+      <h2>路线地图</h2><p class="section-lead">深圳往返莫斯科，中间采用高铁与两段国内航班，避免从摩尔曼斯克折返圣彼得堡。</p>
+      <div class="route-flow">
+        <div class="route-city primary"><b>莫斯科</b><span>2/4—2/7<br>红场、克里姆林宫、画廊与演出</span></div><div class="route-arrow">→</div>
+        <div class="route-city"><b>圣彼得堡</b><span>2/7—2/11<br>冬宫深度游、教堂与马林斯基</span></div><div class="route-arrow">→</div>
+        <div class="route-city"><b>摩尔曼斯克</b><span>2/11—2/14<br>极光、雪地项目与列宁号</span></div><div class="route-arrow">→</div>
+        <div class="route-city primary"><b>莫斯科</b><span>2/14—2/15<br>地铁巡游后返程</span></div>
+      </div>
+    </div>
+  </div></header>
+
+  <main>
+    <section id="overview"><div class="wrap">
+      <h2>路线总览</h2><p class="section-lead">用闭馆日反向排程：周五参观克里姆林宫，周日完成高尔基故居和特列季亚科夫；圣彼得堡把周二完整留给冬宫，周三只安排正常开放的喀山大教堂与城市漫步。</p>
+      <div class="panel"><div class="trip-overview">
+        <div class="overview-step"><b>01 · 莫斯科核心</b><span>红场、克里姆林宫、圣瓦西里、救世主大教堂</span></div>
+        <div class="overview-step"><b>02 · 莫斯科人文</b><span>武装力量大教堂、高尔基故居、特列季亚科夫</span></div>
+        <div class="overview-step"><b>03 · 圣彼得堡</b><span>动物博物馆、圣以撒、冬宫、滴血教堂</span></div>
+        <div class="overview-step"><b>04 · 北极圈</b><span>捷里别尔卡、哈士奇、萨米文化、两次追光</span></div>
+        <div class="overview-step"><b>05 · 顺路返程</b><span>列宁号后直飞莫斯科，次日地铁巡游</span></div>
+      </div></div>
+      <div class="day-nav" aria-label="跳转到每日行程">
+        <a href="#d1"><b>2/4</b><span>抵达</span></a><a href="#d2"><b>2/5</b><span>克里姆林宫</span></a><a href="#d3"><b>2/6</b><span>武装力量</span></a><a href="#d4"><b>2/7</b><span>艺术与高铁</span></a><a href="#d5"><b>2/8</b><span>动物与圣以撒</span></a><a href="#d6"><b>2/9</b><span>冬宫</span></a><a href="#d7"><b>2/10</b><span>城市漫步</span></a><a href="#d8"><b>2/11</b><span>滴血与飞行</span></a><a href="#d9"><b>2/12</b><span>捷里别尔卡</span></a><a href="#d10"><b>2/13</b><span>雪地项目</span></a><a href="#d11"><b>2/14</b><span>列宁号</span></a><a href="#d12"><b>2/15</b><span>地铁返程</span></a><a href="#d13"><b>2/16</b><span>抵达深圳</span></a>
+      </div>
+    </div></section>
+
+    <section id="days"><div class="wrap"><h2>每日行程</h2><p class="section-lead">时间均为当地时间。冬季路况、安检和机场交通已经留出缓冲，演出时段待节目表公布后锁定。</p><div class="timeline">
+
+      <article class="day" id="d1">
+        <div class="day-head"><div class="date"><b>2/4</b><span>周四 · D1</span></div><div class="day-title"><h3>抵达莫斯科 · 红场夜景</h3><p>机场 → 市中心酒店 → 红场 → 古姆百货</p></div><div class="pace"><b>轻松</b><span>只安排无门票项目</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">15:30 抵达</span><span class="chip">红场夜景</span><span class="chip">古姆百货</span></div><ol class="agenda">
+          <li><time>15:30</time><div><b>抵达莫斯科</b><p>入境、取行李与换乘预留约2小时。</p></div></li><li><time>17:30</time><div><b>前往市中心</b><p>机场快线或出租车，通常60–90分钟；建议住红场、剧院广场或特维尔大街附近。</p></div></li><li><time>19:30</time><div><b>红场与古姆百货</b><p>散步、晚餐、看夜景，不安排任何需要卡点入场的项目。</p></div></li>
+        </ol></div><aside class="side"><div class="callout flex"><span class="tag">抵达日原则</span><h4>不把航班晚点变成压力</h4><p>如果通关慢，直接取消夜游，第二天仍会回到红场区域。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>莫斯科抵达 · 目的地影集</h4><span class="folder">D1-2月4日-莫斯科抵达</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>红场夜景</b>把图片放入当日文件夹</span></div><div class="photo-placeholder"><span><b>古姆百货</b>后续自动接入网页</span></div><div class="photo-placeholder"><span><b>莫斯科初见</b>建议保留原图</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d2">
+        <div class="day-head"><div class="date"><b>2/5</b><span>周五 · D2</span></div><div class="day-title"><h3>克里姆林宫 · 红场建筑群</h3><p>武器库 → 教堂广场 → 圣瓦西里 → 救世主大教堂 → 莫斯科大剧院</p></div><div class="pace"><b>较满</b><span>核心点集中在市中心</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">武器库10:00场</span><span class="chip">圣瓦西里</span><span class="chip">歌剧/芭蕾</span></div><ol class="agenda">
+          <li><time>09:15</time><div><b>抵达克里姆林宫入口</b><p>预留安检，步行路线从亚历山大花园进入。</p></div></li><li><time>10:00</time><div><b>武器库与教堂广场</b><p>武器库约2小时，随后参观克里姆林宫建筑群至13:45。</p></div></li><li><time>14:15</time><div><b>圣瓦西里大教堂</b><p>从克里姆林宫步行约1公里，内部参观约1小时。</p></div></li><li><time>15:45</time><div><b>救世主大教堂</b><p>约2.5公里，打车或地铁前往，预留45分钟。</p></div></li><li><time>19:00</time><div><b>莫斯科大剧院</b><p>节目未公布，先预留晚间；根据正式节目调整。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><span class="tag">预约优先</span><h4>先锁武器库10:00场</h4><p>克里姆林宫门票通常提前17天开放；冬季建筑群17:00结束。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>莫斯科核心 · 目的地影集</h4><span class="folder">D2-2月5日-莫斯科核心</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>克里姆林宫</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣瓦西里</b>待添加图片</span></div><div class="photo-placeholder"><span><b>莫斯科大剧院</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d3">
+        <div class="day-head"><div class="date"><b>2/6</b><span>周六 · D3</span></div><div class="day-title"><h3>武装力量大教堂 · 尼库林马戏团</h3><p>市中心 → 爱国者公园 → 道路记忆博物馆 → 市中心</p></div><div class="pace"><b>中等</b><span>远郊往返约3小时</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">55–65公里</span><span class="chip">道路记忆</span><span class="chip">马戏团</span></div><ol class="agenda">
+          <li><time>08:30</time><div><b>从市中心出发</b><p>单程约1.5小时，冬季按2小时准备。</p></div></li><li><time>10:00</time><div><b>武装力量大教堂</b><p>内部与广场参观约1.5小时。</p></div></li><li><time>11:30</time><div><b>道路记忆博物馆</b><p>参观至13:30，随后简餐、返回市区。</p></div></li><li><time>19:00</time><div><b>尼库林马戏团</b><p>保留莫斯科场，避免给圣彼得堡增加负担。</p></div></li>
+        </ol></div><aside class="side"><div class="callout ice"><span class="tag">交通</span><h4>建议包车或一日团</h4><p>远郊公共交通换乘复杂，冬季天黑早，包车更稳定。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>军事建筑与演出 · 目的地影集</h4><span class="folder">D3-2月6日-武装力量大教堂</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>武装力量大教堂</b>待添加图片</span></div><div class="photo-placeholder"><span><b>道路记忆</b>待添加图片</span></div><div class="photo-placeholder"><span><b>尼库林马戏团</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d4">
+        <div class="day-head"><div class="date"><b>2/7</b><span>周日 · D4</span></div><div class="day-title"><h3>高尔基故居 · 特列季亚科夫 · 高铁北上</h3><p>高尔基故居 → 特列季亚科夫画廊 → 列宁格勒站 → 圣彼得堡</p></div><div class="pace"><b>中等</b><span>两馆 + 一段高铁</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">高尔基10:00</span><span class="chip">画廊3小时</span><span class="chip">晚间高铁</span></div><ol class="agenda">
+          <li><time>10:00</time><div><b>高尔基故居博物馆</b><p>参观约90分钟，入口在斯皮里多诺夫卡街一侧。</p></div></li><li><time>12:15</time><div><b>特列季亚科夫画廊</b><p>两地约3.5–4公里，打车15–25分钟；画廊预留约3小时。</p></div></li><li><time>16:00</time><div><b>前往列宁格勒火车站</b><p>约4–5公里，预留40分钟和进站时间。</p></div></li><li><time>17:30+</time><div><b>高铁前往圣彼得堡</b><p>优先选择抵达不晚于22:30的车次。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><h4>门票节奏</h4><p>高尔基故居通常只提前约三周放票；画廊建议提前选定入场时段。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>文学与艺术 · 目的地影集</h4><span class="folder">D4-2月7日-莫斯科至圣彼得堡</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>高尔基故居</b>待添加图片</span></div><div class="photo-placeholder"><span><b>特列季亚科夫</b>待添加图片</span></div><div class="photo-placeholder"><span><b>俄铁高铁</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d5">
+        <div class="day-head"><div class="date"><b>2/8</b><span>周一 · D5</span></div><div class="day-title"><h3>动物博物馆 · 圣以撒大教堂</h3><p>瓦西里岛 → 宫桥 → 圣以撒广场</p></div><div class="pace"><b>中等</b><span>两点相距约2公里</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">动物博物馆11:00</span><span class="chip">圣以撒14:45</span><span class="chip">柱廊可选</span></div><ol class="agenda">
+          <li><time>11:00</time><div><b>俄罗斯科学院动物博物馆</b><p>预留2.5小时，重点看鲸类、猛犸象和大型动物标本。</p></div></li><li><time>13:30</time><div><b>午餐与转场</b><p>打车10–15分钟；步行约25–30分钟，但冬季过桥风大。</p></div></li><li><time>14:45</time><div><b>圣以撒大教堂</b><p>内部约90分钟；体力和天气允许时16:15登柱廊。</p></div></li>
+        </ol></div><aside class="side"><div class="callout flex"><span class="tag">闭馆规避</span><h4>动物馆不能挪到周二</h4><p>动物博物馆周二闭馆；圣以撒周三闭馆，因此周一组合最稳。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>自然史与穹顶 · 目的地影集</h4><span class="folder">D5-2月8日-动物博物馆与圣以撒</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>动物博物馆</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣以撒内部</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣以撒柱廊</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d6">
+        <div class="day-head"><div class="date"><b>2/9</b><span>周二 · D6</span></div><div class="day-title"><h3>冬宫深度游 · 全天只安排一个景点</h3><p>宫殿广场 → 冬宫主馆 → 酒店休息</p></div><div class="pace"><b>舒适</b><span>主馆周二开放至20:00</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">11:00入场</span><span class="chip">6–7小时</span><span class="chip">不安排演出</span></div><ol class="agenda">
+          <li><time>10:30</time><div><b>抵达宫殿广场</b><p>提前找到预约入口，完成安检与寄存。</p></div></li><li><time>11:00</time><div><b>皇室宫殿与国事大厅</b><p>约旦阶梯、王座厅、金色客厅等重点空间。</p></div></li><li><time>13:30</time><div><b>馆内休息</b><p>简餐和补水，不离馆赶第二个景点。</p></div></li><li><time>14:15</time><div><b>重点艺术展厅</b><p>伦勃朗、达·芬奇、拉斐尔及个人兴趣展厅。</p></div></li><li><time>18:30</time><div><b>结束参观</b><p>仍保留约30分钟机动时间，避免临近闭馆匆忙离场。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><span class="tag">核心原则</span><h4>这一天不叠加任何必去点</h4><p>真正给冬宫一整天；晚餐也尽量安排在酒店附近。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>冬宫深度游 · 目的地影集</h4><span class="folder">D6-2月9日-冬宫</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>宫殿广场</b>待添加图片</span></div><div class="photo-placeholder"><span><b>冬宫宫殿空间</b>待添加图片</span></div><div class="photo-placeholder"><span><b>重点藏品</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d7">
+        <div class="day-head"><div class="date"><b>2/10</b><span>周三 · D7</span></div><div class="day-title"><h3>喀山大教堂 · 涅瓦大街 · 马林斯基</h3><p>喀山大教堂 → 百年书店 → 格里博耶多夫运河 → 涅瓦大街 → 剧院</p></div><div class="pace"><b>舒适</b><span>周三闭馆规避日</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">喀山大教堂</span><span class="chip">城市漫步</span><span class="chip">马林斯基剧院</span></div><ol class="agenda">
+          <li><time>09:30</time><div><b>喀山大教堂</b><p>正常使用的宗教场所，周三开放；参观时避开礼拜核心区域。</p></div></li><li><time>10:15</time><div><b>百年书店 / 歌手之家</b><p>就在喀山大教堂对面，步行约3分钟。</p></div></li><li><time>11:00</time><div><b>格里博耶多夫运河沿岸</b><p>只做冬季步行，不安排运河或涅瓦河游船；顺路看滴血教堂外观。</p></div></li><li><time>13:30</time><div><b>涅瓦大街慢逛</b><p>把下午留给咖啡、购物和休息。</p></div></li><li><time>19:00</time><div><b>马林斯基剧院</b><p>节目公布后优先锁定本晚；若无合适节目，可改2月8日晚。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><h4>不要安排两座收费教堂</h4><p>圣以撒和滴血教堂的博物馆部分周三都闭馆，只看外观即可。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>圣彼得堡城市漫步 · 目的地影集</h4><span class="folder">D7-2月10日-圣彼得堡城市漫步</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>喀山大教堂</b>待添加图片</span></div><div class="photo-placeholder"><span><b>百年书店</b>待添加图片</span></div><div class="photo-placeholder"><span><b>马林斯基剧院</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d8">
+        <div class="day-head"><div class="date"><b>2/11</b><span>周四 · D8</span></div><div class="day-title"><h3>滴血教堂 · 飞往摩尔曼斯克</h3><p>滴血教堂 → 酒店取行李 → LED机场 → 摩尔曼斯克 → 追极光</p></div><div class="pace"><b>中等</b><span>15:30–17:35航班</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">10:00滴血教堂</span><span class="chip">11:30离开市区</span><span class="chip">第一晚追光</span></div><ol class="agenda">
+          <li><time>08:30</time><div><b>退房并寄存行李</b><p>随身只带参观需要的小包。</p></div></li><li><time>10:00</time><div><b>滴血教堂内部</b><p>预留1小时，开门即进，避免压缩机场时间。</p></div></li><li><time>11:30</time><div><b>从市中心前往机场</b><p>约22–25公里，冬季预留60–75分钟。</p></div></li><li><time>15:30</time><div><b>飞往摩尔曼斯克</b><p>17:35抵达，入住、晚餐并休息。</p></div></li><li><time>21:00+</time><div><b>第一次极光团</b><p>根据实时云量与天气决定出发时间。</p></div></li>
+        </ol></div><aside class="side"><div class="callout flex"><h4>机场缓冲充足</h4><p>约12:45到机场，距离起飞仍有2小时45分钟。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>滴血教堂与北极圈初见 · 目的地影集</h4><span class="folder">D8-2月11日-滴血教堂至摩尔曼斯克</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>滴血教堂内部</b>待添加图片</span></div><div class="photo-placeholder"><span><b>摩尔曼斯克</b>待添加图片</span></div><div class="photo-placeholder"><span><b>第一次极光</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d9">
+        <div class="day-head"><div class="date"><b>2/12</b><span>周五 · D9</span></div><div class="day-title"><h3>捷里别尔卡 · 北冰洋一日</h3><p>摩尔曼斯克 → 老捷里别尔卡 → 新捷里别尔卡 → 摩尔曼斯克</p></div><div class="pace"><b>较累</b><span>约12小时 · 天气依赖</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">北冰洋</span><span class="chip">沉船墓地</span><span class="chip">龙蛋沙滩</span><span class="chip">国家公园</span></div><ol class="agenda">
+          <li><time>07:30</time><div><b>从摩尔曼斯克出发</b><p>单程约2.5–3小时，暴雪或封路时以当地管制为准。</p></div></li><li><time>10:30</time><div><b>老捷里别尔卡</b><p>沉船墓地、鲸鱼骨架、最北秋千等集中参观。</p></div></li><li><time>13:00</time><div><b>当地午餐</b><p>海鲜或俄式简餐，补充热量。</p></div></li><li><time>14:00</time><div><b>新捷里别尔卡与北冰洋</b><p>龙蛋沙滩、冰封王座、海岸与国家公园按路况取舍。</p></div></li><li><time>20:00</time><div><b>返回摩尔曼斯克</b><p>不把第二次追光设为当晚刚性项目。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><span class="tag">天气备选</span><h4>封路时不要硬闯</h4><p>若道路关闭，把当天改为摩尔曼斯克城市日，和2月13日机动调换。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>北冰洋海岸 · 目的地影集</h4><span class="folder">D9-2月12日-捷里别尔卡</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>龙蛋沙滩</b>待添加图片</span></div><div class="photo-placeholder"><span><b>沉船墓地</b>待添加图片</span></div><div class="photo-placeholder"><span><b>北冰洋</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d10">
+        <div class="day-head"><div class="date"><b>2/13</b><span>周六 · D10</span></div><div class="day-title"><h3>哈士奇 · 萨米文化 · 第二次追光</h3><p>摩尔曼斯克 → 冬季体验基地 → 摩尔曼斯克</p></div><div class="pace"><b>中等</b><span>户外项目集中一天</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">狗拉雪橇</span><span class="chip">萨米文化</span><span class="chip">驯鹿</span><span class="chip">雪地摩托</span></div><ol class="agenda">
+          <li><time>09:30</time><div><b>前往冬季体验基地</b><p>尽量选择可一次完成哈士奇、萨米文化和雪地摩托的组合产品。</p></div></li><li><time>10:30</time><div><b>哈士奇与狗拉雪橇</b><p>穿防风外层，提前确认项目时长和保险。</p></div></li><li><time>12:30</time><div><b>萨米文化与驯鹿</b><p>午餐和文化体验安排在同一基地。</p></div></li><li><time>14:30</time><div><b>雪地摩托 / 日落雪原</b><p>2月日照有限，按当天光线调整先后。</p></div></li><li><time>21:00+</time><div><b>第二次追极光</b><p>作为主力极光夜，按预报选择出城方向。</p></div></li>
+        </ol></div><aside class="side"><div class="callout ice"><h4>合并项目更节省车程</h4><p>不要分别预订相距很远的哈士奇村和萨米村，优先选择同基地组合。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>雪地体验 · 目的地影集</h4><span class="folder">D10-2月13日-哈士奇与萨米村</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>哈士奇</b>待添加图片</span></div><div class="photo-placeholder"><span><b>驯鹿与萨米文化</b>待添加图片</span></div><div class="photo-placeholder"><span><b>极光</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d11">
+        <div class="day-head"><div class="date"><b>2/14</b><span>周日 · D11</span></div><div class="day-title"><h3>列宁号 · 晚间直飞莫斯科</h3><p>列宁号码头 → 可选阿廖沙纪念碑 → MMK机场 → 莫斯科</p></div><div class="pace"><b>舒适</b><span>18:55–21:40航班</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">首选10:30场</span><span class="chip">实名票</span><span class="chip">15:30离开市区</span></div><ol class="agenda">
+          <li><time>09:00</time><div><b>退房并寄存大件行李</b><p>列宁号不允许携带行李箱和大背包，船上没有寄存处。</p></div></li><li><time>10:30</time><div><b>列宁号核动力破冰船</b><p>首选上午第一场；必须跟随固定导览，不支持自由参观。</p></div></li><li><time>11:45</time><div><b>午餐</b><p>若买到12:00场，把午餐提前或延后。</p></div></li><li><time>13:00</time><div><b>可选阿廖沙纪念碑</b><p>仅在列宁号上午场、天气稳定时加入。</p></div></li><li><time>15:30</time><div><b>最晚离开摩尔曼斯克市区</b><p>车程约40–60分钟，预留冬季路况。</p></div></li><li><time>18:55</time><div><b>飞往莫斯科</b><p>21:40抵达；当晚住市中心，方便次日地铁巡游。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><span class="tag">硬截止</span><h4>不要订15:00后的列宁号场次</h4><p>首选10:30，12:00可接受，最迟13:30左右；迟到超过10分钟可能无法登船。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>列宁号与摩尔曼斯克 · 目的地影集</h4><span class="folder">D11-2月14日-列宁号至莫斯科</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>列宁号外观</b>待添加图片</span></div><div class="photo-placeholder"><span><b>列宁号内部</b>待添加图片</span></div><div class="photo-placeholder"><span><b>阿廖沙纪念碑</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d12">
+        <div class="day-head"><div class="date"><b>2/15</b><span>周一 · D12</span></div><div class="day-title"><h3>莫斯科地铁巡游 · 返程</h3><p>共青团站 → 新村庄站 → 基辅站 → 胜利公园 → 革命广场 → 机场</p></div><div class="pace"><b>中等</b><span>19:10返程航班</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">完整地铁巡游</span><span class="chip">不拆分到前几天</span><span class="chip">14:30离城</span></div><ol class="agenda">
+          <li><time>08:30</time><div><b>早餐、退房、寄存</b><p>只带随身小包参观地铁。</p></div></li><li><time>09:00</time><div><b>环线与经典车站</b><p>共青团站、新村庄站、基辅站，重点看穹顶、彩窗与马赛克。</p></div></li><li><time>10:30</time><div><b>胜利公园与革命广场</b><p>加入马雅可夫斯基站后结束，全程约2.5小时。</p></div></li><li><time>11:45</time><div><b>午餐、取行李</b><p>不要再增加博物馆；周一本身也是多数博物馆闭馆日。</p></div></li><li><time>14:30</time><div><b>前往机场</b><p>按具体机场选择机场快线或出租车，目标16:00前抵达。</p></div></li><li><time>19:10</time><div><b>莫斯科飞深圳</b><p>跨夜飞行，抵达日期为2月16日。</p></div></li>
+        </ol></div><aside class="side"><div class="callout flex"><h4>把地铁集中在最后一天</h4><p>前几日不再零散插入地铁站，降低步数和疲惫感。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>莫斯科地铁 · 目的地影集</h4><span class="folder">D12-2月15日-地铁巡游返程</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>共青团站</b>待添加图片</span></div><div class="photo-placeholder"><span><b>基辅站</b>待添加图片</span></div><div class="photo-placeholder"><span><b>革命广场站</b>待添加图片</span></div></div></div></div>
+      </article>
+
+      <article class="day" id="d13">
+        <div class="day-head"><div class="date"><b>2/16</b><span>周二 · D13</span></div><div class="day-title"><h3>抵达深圳 · 行程结束</h3><p>莫斯科 → 深圳</p></div><div class="pace"><b>返程</b><span>请假第3天</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">航班日期+1</span><span class="chip">不安排工作</span></div><ol class="agenda"><li><time>当天</time><div><b>抵达深圳</b><p>预留入境、取行李和回家时间；不建议把当天设为正式工作日。</p></div></li></ol></div><aside class="side"><div class="callout ice"><h4>请假结论</h4><p>按2月5日—14日为假期计算，共请2月4日、15日、16日三天。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>旅程收尾 · 目的地影集</h4><span class="folder">D13-2月16日-抵达深圳</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>旅程合照</b>待添加图片</span></div><div class="photo-placeholder"><span><b>纪念品</b>待添加图片</span></div><div class="photo-placeholder"><span><b>返程记录</b>待添加图片</span></div></div></div></div>
+      </article>
+
+    </div></div></section>
+
+    <section id="hours"><div class="wrap"><h2>开放时间核对</h2><p class="section-lead">以下为当前官方常规时间。2027年临时维修、宗教活动和特殊接待尚未发布，出发前两周必须再次核对。</p><div class="table-wrap"><table>
+      <thead><tr><th>地点</th><th>安排</th><th>当前常规时间 / 闭馆日</th><th>结论</th></tr></thead><tbody>
+        <tr><td><b>克里姆林宫 / 武器库</b></td><td>2/5 周五</td><td>建筑群冬季10:00–17:00；武器库10:00–18:00；周四闭馆</td><td>可行</td></tr>
+        <tr><td><b>圣瓦西里大教堂</b></td><td>2/5 周五 14:15</td><td>冬季通常11:00–17:00；每月首个周三闭馆</td><td>可行</td></tr>
+        <tr><td><b>救世主大教堂</b></td><td>2/5 周五 15:45</td><td>通常10:00–18:00；周一13:00开放</td><td>可行</td></tr>
+        <tr><td><b>武装力量大教堂</b></td><td>2/6 周六</td><td>教堂每日08:00–21:00；道路记忆周一维护</td><td>可行</td></tr>
+        <tr><td><b>高尔基故居</b></td><td>2/7 周日</td><td>周三至周日10:00–18:00；周一、周二闭馆</td><td>可行</td></tr>
+        <tr><td><b>特列季亚科夫画廊</b></td><td>2/7 周日</td><td>周二至周日10:00–21:00；周一闭馆</td><td>可行</td></tr>
+        <tr><td><b>动物博物馆</b></td><td>2/8 周一</td><td>11:00–19:00；周二、冬季第二个周三闭馆</td><td>可行</td></tr>
+        <tr><td><b>圣以撒大教堂</b></td><td>2/8 周一</td><td>10:00–18:00；17:30停止入场；周三闭馆</td><td>可行</td></tr>
+        <tr><td><b>冬宫主馆</b></td><td>2/9 周二</td><td>周二、周五、周六11:00–20:00；周一闭馆</td><td>最理想</td></tr>
+        <tr><td><b>喀山大教堂</b></td><td>2/10 周三</td><td>周一至周六09:00至晚间礼拜后；每日开放</td><td>可行</td></tr>
+        <tr><td><b>滴血教堂</b></td><td>2/11 周四</td><td>10:00–18:00；17:30停止入场；周三闭馆</td><td>可行</td></tr>
+        <tr><td><b>列宁号</b></td><td>2/14 周日 上午</td><td>固定实名场次；必须跟团；具体2027场次待发布</td><td>只订上午场</td></tr>
+      </tbody>
+    </table></div></div></section>
+
+    <section id="todo"><div class="wrap"><h2>预订清单</h2><p class="section-lead">先处理容量小、固定时段和影响全程结构的项目。</p><div class="todo-grid">
+      <div class="todo"><h3>第一优先级</h3><ul><li>深圳—莫斯科往返机票</li><li>2/11 圣彼得堡—摩尔曼斯克</li><li>2/14 摩尔曼斯克—莫斯科</li><li>莫斯科—圣彼得堡高铁</li></ul></div>
+      <div class="todo"><h3>固定时段门票</h3><ul><li>克里姆林宫武器库10:00场</li><li>列宁号10:30或12:00场</li><li>冬宫周二入场票</li><li>高尔基故居与动物博物馆</li></ul></div>
+      <div class="todo"><h3>演出与冬季项目</h3><ul><li>莫斯科大剧院节目表</li><li>尼库林马戏团</li><li>马林斯基剧院</li><li>捷里别尔卡、雪地组合团、两晚极光团</li></ul></div>
+      <div class="todo"><h3>住宿区域</h3><ul><li>莫斯科：红场 / 剧院广场附近</li><li>圣彼得堡：涅瓦大街 / 海军部附近</li><li>摩尔曼斯克：五角广场附近</li><li>2/14晚仍住莫斯科市中心</li></ul></div>
+      <div class="todo"><h3>冬季装备</h3><ul><li>防风防水外层与保暖中层</li><li>防滑雪地靴、羊毛袜、暖宝宝</li><li>相机备用电池与充电宝</li><li>室内外温差下的可拆穿搭</li></ul></div>
+      <div class="todo"><h3>出发前复核</h3><ul><li>出发前14天核对全部闭馆公告</li><li>确认三个剧院实际开演时间</li><li>查看捷里别尔卡道路状态</li><li>确认返程机场与机场快线</li></ul></div>
+    </div></div></section>
+
+    <section id="sources"><div class="wrap"><h2>官方核对入口</h2><p class="section-lead">门票开放后以官网售票日历为最终依据。</p><ul class="sources">
+      <li><a href="https://kreml.ru/ru/guide" target="_blank" rel="noopener">莫斯科克里姆林宫博物馆</a></li><li><a href="https://shm.ru/museum/hvb/" target="_blank" rel="noopener">圣瓦西里大教堂</a></li><li><a href="https://xxc.ru/contacts/" target="_blank" rel="noopener">救世主大教堂</a></li><li><a href="https://1418museum.ru/faq/" target="_blank" rel="noopener">武装力量大教堂与道路记忆</a></li><li><a href="https://museum.imli.ru/" target="_blank" rel="noopener">高尔基故居博物馆</a></li><li><a href="https://www.tretyakovgallery.ru/for-visitors/museums/istoricheskoe-zdanie/" target="_blank" rel="noopener">特列季亚科夫画廊</a></li><li><a href="https://www.hermitagemuseum.org/visitus/" target="_blank" rel="noopener">冬宫 / 艾尔米塔什博物馆</a></li><li><a href="https://www.cathedral.ru/ru/visitors/time" target="_blank" rel="noopener">圣以撒与滴血教堂</a></li><li><a href="https://www.zin.ru/museum/info.html" target="_blank" rel="noopener">俄罗斯科学院动物博物馆</a></li><li><a href="https://kazansky-spb.ru/texts/history" target="_blank" rel="noopener">喀山大教堂</a></li><li><a href="https://www.rosatomflot.ru/atomnyy-ledokol-lenin/grafik-raboty/" target="_blank" rel="noopener">列宁号官方场次</a></li>
+    </ul></div></section>
+  </main>
+
+  <footer><div class="wrap">俄罗斯冬季行程计划 · 2027｜第一版已按闭馆日与航班时间校准</div></footer>
+  <script>
+    const photoSets = {
+      "d1": [
+            [
+                  "D1-2月4日-莫斯科抵达/【🇷🇺莫斯科Day1】红场&特列季亚科夫_1_._来自小红书网页版.jpg",
+                  "【🇷🇺莫斯科Day1】红场&特列季亚科夫"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/【🇷🇺莫斯科Day1】红场&特列季亚科夫_3_._来自小红书网页版.jpg",
+                  "【🇷🇺莫斯科Day1】红场&特列季亚科夫"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/【🇷🇺莫斯科Day1】红场&特列季亚科夫_9_._来自小红书网页版.jpg",
+                  "【🇷🇺莫斯科Day1】红场&特列季亚科夫"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科旅行攻略｜带你玩转俄式浪漫_2_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科旅行攻略｜带你玩转俄式浪漫_8_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科红场半日游+武装力量大教堂全攻略_1_大星历险记_来自小红书网页版.jpg",
+                  "莫斯科红场半日游+武装力量大教堂全攻略"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科红场半日游+武装力量大教堂全攻略_2_大星历险记_来自小红书网页版.jpg",
+                  "莫斯科红场半日游+武装力量大教堂全攻略"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科红场半日游+武装力量大教堂全攻略_4_大星历险记_来自小红书网页版.jpg",
+                  "莫斯科红场半日游+武装力量大教堂全攻略"
+            ],
+            [
+                  "D1-2月4日-莫斯科抵达/莫斯科红场半日游+武装力量大教堂全攻略_5_大星历险记_来自小红书网页版.jpg",
+                  "莫斯科红场半日游+武装力量大教堂全攻略"
+            ]
+      ],
+      "d10": [
+            [
+                  "D10-2月13日-哈士奇与萨米村/❄️在北极圈，我闯进了萨米人的冬天🦌_1_猫咪哥哥鹦鹉妹妹_来自小红书网页版.jpg",
+                  "❄️在北极圈，我闯进了萨米人的冬天🦌"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/❄️在北极圈，我闯进了萨米人的冬天🦌_2_猫咪哥哥鹦鹉妹妹_来自小红书网页版.jpg",
+                  "❄️在北极圈，我闯进了萨米人的冬天🦌"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/❄️在北极圈，我闯进了萨米人的冬天🦌_4_猫咪哥哥鹦鹉妹妹_来自小红书网页版.jpg",
+                  "❄️在北极圈，我闯进了萨米人的冬天🦌"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/❄️在北极圈，我闯进了萨米人的冬天🦌_7_猫咪哥哥鹦鹉妹妹_来自小红书网页版.jpg",
+                  "❄️在北极圈，我闯进了萨米人的冬天🦌"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/完美的 俄罗斯旅行 摩尔曼斯克  Day9🌸_1_YYoung_来自小红书网页版.jpg",
+                  "完美的 俄罗斯旅行 摩尔曼斯克  Day9🌸"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/摩尔市区撸狗撸鹿的北极光公园涨价了😂_1_凡的人生实验室🥕_来自小红书网页版.jpg",
+                  "摩尔市区撸狗撸鹿的北极光公园涨价了😂"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/摩尔曼斯克一定要来老哈士奇公园_1_阿莱Arri_来自小红书网页版.jpg",
+                  "摩尔曼斯克一定要来老哈士奇公园"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/神秘北极圈，阿拉斯加的山巅，谁的脸…_1_大力水手_来自小红书网页版.jpg",
+                  "神秘北极圈，阿拉斯加的山巅，谁的脸…"
+            ],
+            [
+                  "D10-2月13日-哈士奇与萨米村/神秘北极圈，阿拉斯加的山巅，谁的脸…_5_大力水手_来自小红书网页版.jpg",
+                  "神秘北极圈，阿拉斯加的山巅，谁的脸…"
+            ]
+      ],
+      "d11": [
+            [
+                  "D11-2月14日-列宁号至莫斯科/МУРМАНСК｜来到北极圈内的不冻港_1_QISIWOLA_来自小红书网页版.jpg",
+                  "МУРМАНСК｜来到北极圈内的不冻港"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/МУРМАНСК｜来到北极圈内的不冻港_2_QISIWOLA_来自小红书网页版.jpg",
+                  "МУРМАНСК｜来到北极圈内的不冻港"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/仿佛身在电影里｜这座城市有的可不止极光‼️_2_小猪无惧_来自小红书网页版.jpg",
+                  "仿佛身在电影里｜这座城市有的可不止极光‼️"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/仿佛身在电影里｜这座城市有的可不止极光‼️_3_小猪无惧_来自小红书网页版.jpg",
+                  "仿佛身在电影里｜这座城市有的可不止极光‼️"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/你永远可以相信苏联美学_1_绝美艺术_来自小红书网页版.jpg",
+                  "你永远可以相信苏联美学"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/摩尔曼斯克｜列宁号破冰船🚢_1_Rachel_来自小红书网页版.jpg",
+                  "摩尔曼斯克｜列宁号破冰船🚢"
+            ],
+            [
+                  "D11-2月14日-列宁号至莫斯科/🇷🇺摩尔曼斯克｜在北极圈不冻港(登船版！❄_1_小马皮西多_来自小红书网页版.jpg",
+                  "🇷🇺摩尔曼斯克｜在北极圈不冻港(登船版！❄"
+            ]
+      ],
+      "d12": [
+            [
+                  "D12-2月15日-地铁巡游返程/五一莫斯科打卡点-冷钢之蓝_1_Jeree_来自小红书网页版.jpg",
+                  "五一莫斯科打卡点-冷钢之蓝"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/旧时代的遗痕 莫斯科地铁_1_Call me Problem_来自小红书网页版.jpg",
+                  "旧时代的遗痕 莫斯科地铁"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/旧时代的遗痕 莫斯科地铁_2_Call me Problem_来自小红书网页版.jpg",
+                  "旧时代的遗痕 莫斯科地铁"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/旧时代的遗痕 莫斯科地铁_3_Call me Problem_来自小红书网页版.jpg",
+                  "旧时代的遗痕 莫斯科地铁"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_2_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_3_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_4_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_6_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_7_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_8_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁全攻略：把这10个地下宫殿逛穿！_9_麦芽糖在俄罗斯_来自小红书网页版.jpg",
+                  "莫斯科地铁全攻略：把这10个地下宫殿逛穿！"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁故事感拍照保姆攻略📸爆款机位_1_才不是小姐姐_来自小红书网页版.jpg",
+                  "莫斯科地铁故事感拍照保姆攻略📸爆款机位"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科地铁故事感拍照保姆攻略📸爆款机位_6_才不是小姐姐_来自小红书网页版.jpg",
+                  "莫斯科地铁故事感拍照保姆攻略📸爆款机位"
+            ],
+            [
+                  "D12-2月15日-地铁巡游返程/莫斯科旅行攻略｜带你玩转俄式浪漫_4_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ]
+      ],
+      "d2": [
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科Day2_1_程微_来自小红书网页版.jpg",
+                  "莫斯科Day2"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科Day2_2_程微_来自小红书网页版.jpg",
+                  "莫斯科Day2"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科—《莫斯科救世主大教堂》No_082_5_艺术的故事_来自小红书网页版.jpg",
+                  "莫斯科—《莫斯科救世主大教堂》No"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科救世主大教堂_1_Rubens niu_来自小红书网页版.jpg",
+                  "莫斯科救世主大教堂"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科旅行攻略｜带你玩转俄式浪漫_3_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科旅行攻略｜带你玩转俄式浪漫_5_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ],
+            [
+                  "D2-2月5日-莫斯科核心/莫斯科旅行攻略｜带你玩转俄式浪漫_7_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ]
+      ],
+      "d3": [
+            [
+                  "D3-2月6日-武装力量大教堂/俄罗斯游记–莫斯科篇(二)_1_天府三街社畜吃喝_来自小红书网页版.jpg",
+                  "俄罗斯游记–莫斯科篇(二)"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/俄罗斯游记–莫斯科篇(二)_6_天府三街社畜吃喝_来自小红书网页版.jpg",
+                  "俄罗斯游记–莫斯科篇(二)"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_1_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_2_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_3_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_4_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_5_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_6_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/武装力量大教堂丨俄式硬核军事美学，超震撼_8_安影世界📸_来自小红书网页版.jpg",
+                  "武装力量大教堂丨俄式硬核军事美学，超震撼"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/莫斯科尼库林马戏团_1_老兄我醒着_来自小红书网页版.jpg",
+                  "莫斯科尼库林马戏团"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/莫斯科最值得去的教堂⛪️_1_寞盒子_来自小红书网页版.jpg",
+                  "莫斯科最值得去的教堂⛪️"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/莫斯科最值得去的教堂⛪️_3_寞盒子_来自小红书网页版.jpg",
+                  "莫斯科最值得去的教堂⛪️"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/莫斯科最值得去的教堂⛪️_8_寞盒子_来自小红书网页版.jpg",
+                  "莫斯科最值得去的教堂⛪️"
+            ]
+      ],
+      "d4": [
+            [
+                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_1_毛手手_来自小红书网页版.jpg",
+                  "曲线的艺术，来自俄罗斯的Art Nouveau"
+            ],
+            [
+                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_2_毛手手_来自小红书网页版.jpg",
+                  "曲线的艺术，来自俄罗斯的Art Nouveau"
+            ],
+            [
+                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_6_毛手手_来自小红书网页版.jpg",
+                  "曲线的艺术，来自俄罗斯的Art Nouveau"
+            ],
+            [
+                  "D4-2月7日-莫斯科至圣彼得堡/莫斯科Art Nouveau｜现代主义中的梦中楼梯_3_Ruby_来自小红书网页版.jpg",
+                  "莫斯科Art Nouveau｜现代主义中的梦中楼梯"
+            ],
+            [
+                  "D4-2月7日-莫斯科至圣彼得堡/莫斯科旅行攻略｜带你玩转俄式浪漫_6_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
+                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+            ]
+      ],
+      "d5": [
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/Back to the past_1_alla_来自小红书网页版.jpg",
+                  "Back to the past"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/《圣伊撒大教堂》，一秒坠入黄金梦乡，登顶成功_1_B5_来自小红书网页版.jpg",
+                  "《圣伊撒大教堂》，一秒坠入黄金梦乡，登顶成功"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡3日｜极繁美学下的文艺之旅_4_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_10_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_11_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_15_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_1_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_4_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/圣彼得堡动物学博物馆-世界三大标本馆之一_7_masha_来自小红书网页版.jpg",
+                  "圣彼得堡动物学博物馆-世界三大标本馆之一"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/被圣彼得堡美一大跳_1_贾斯汀的猫_来自小红书网页版.jpg",
+                  "被圣彼得堡美一大跳"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/被圣彼得堡美一大跳_4_贾斯汀的猫_来自小红书网页版.jpg",
+                  "被圣彼得堡美一大跳"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/被圣彼得堡美一大跳_5_贾斯汀的猫_来自小红书网页版.jpg",
+                  "被圣彼得堡美一大跳"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/🦣圣彼得堡这家动物博物馆，真的有点东西！_1_Russia就出发_来自小红书网页版.jpg",
+                  "🦣圣彼得堡这家动物博物馆，真的有点东西！"
+            ],
+            [
+                  "D5-2月8日-动物博物馆与圣以撒/🦣圣彼得堡这家动物博物馆，真的有点东西！_2_Russia就出发_来自小红书网页版.jpg",
+                  "🦣圣彼得堡这家动物博物馆，真的有点东西！"
+            ]
+      ],
+      "d6": [
+            [
+                  "D6-2月9日-冬宫/不难想象当年的西欧人眼里俄国有多暴发户_1_VotMaf_来自小红书网页版.jpg",
+                  "不难想象当年的西欧人眼里俄国有多暴发户"
+            ],
+            [
+                  "D6-2月9日-冬宫/不难想象当年的西欧人眼里俄国有多暴发户_4_VotMaf_来自小红书网页版.jpg",
+                  "不难想象当年的西欧人眼里俄国有多暴发户"
+            ],
+            [
+                  "D6-2月9日-冬宫/不难想象当年的西欧人眼里俄国有多暴发户_8_VotMaf_来自小红书网页版.jpg",
+                  "不难想象当年的西欧人眼里俄国有多暴发户"
+            ],
+            [
+                  "D6-2月9日-冬宫/不难想象当年的西欧人眼里俄国有多暴发户_9_VotMaf_来自小红书网页版.jpg",
+                  "不难想象当年的西欧人眼里俄国有多暴发户"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫博物馆十大镇馆之宝｜你见过哪个？_1_Jazzy的艺史趣谈_来自小红书网页版.jpg",
+                  "冬宫博物馆十大镇馆之宝｜你见过哪个？"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_1_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_2_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_3_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_6_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_7_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/冬宫｜穿过一扇门就被震撼一次_8_香菜腐竹油豆皮_来自小红书网页版.jpg",
+                  "冬宫｜穿过一扇门就被震撼一次"
+            ],
+            [
+                  "D6-2月9日-冬宫/圣彼得堡3日｜极繁美学下的文艺之旅_13_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D6-2月9日-冬宫/圣彼得堡3日｜极繁美学下的文艺之旅_14_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D6-2月9日-冬宫/圣彼得堡3日｜极繁美学下的文艺之旅_15_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D6-2月9日-冬宫/圣彼得堡3日｜极繁美学下的文艺之旅_5_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D6-2月9日-冬宫/🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）_11_菲菲走着瞧_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）"
+            ],
+            [
+                  "D6-2月9日-冬宫/🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）_5_菲菲走着瞧_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）"
+            ],
+            [
+                  "D6-2月9日-冬宫/🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）_6_菲菲走着瞧_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）"
+            ],
+            [
+                  "D6-2月9日-冬宫/🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）_7_菲菲走着瞧_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡｜冬宫超精华看展攻略（附展厅）"
+            ]
+      ],
+      "d7": [
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/圣彼得堡3日｜极繁美学下的文艺之旅_11_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/圣彼得堡3日｜极繁美学下的文艺之旅_12_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/圣彼得堡3日｜极繁美学下的文艺之旅_9_＿桃之夭夭_来自小红书网页版.jpg",
+                  "圣彼得堡3日｜极繁美学下的文艺之旅"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗_1_kiyo的取景器_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗_2_kiyo的取景器_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗_3_kiyo的取景器_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗_4_kiyo的取景器_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗"
+            ],
+            [
+                  "D7-2月10日-圣彼得堡城市漫步/🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗_6_kiyo的取景器_来自小红书网页版.jpg",
+                  "🇷🇺圣彼得堡·喀山大教堂｜穹顶下的史诗"
+            ]
+      ],
+      "d9": [
+            [
+                  "D9-2月12日-捷里别尔卡/2.14刚到摩尔曼斯克，吃得有点太好了。_1_平时撸代码周末才拍照_来自小红书网页版.jpg",
+                  "2.14刚到摩尔曼斯克，吃得有点太好了。"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/俄罗斯·捷里攻略💙穿越极夜，奔赴北冰洋尽头_10_叶子酱酱__来自小红书网页版.jpg",
+                  "俄罗斯·捷里攻略💙穿越极夜，奔赴北冰洋尽头"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/俄罗斯·捷里攻略💙穿越极夜，奔赴北冰洋尽头_1_叶子酱酱__来自小红书网页版.jpg",
+                  "俄罗斯·捷里攻略💙穿越极夜，奔赴北冰洋尽头"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡，出门左转有极光_1_思若思_来自小红书网页版.jpg",
+                  "捷里别尔卡，出门左转有极光"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡｜终于来到世界尽头❄️两日游攻略_13_田小吱_来自小红书网页版.jpg",
+                  "捷里别尔卡｜终于来到世界尽头❄️两日游攻略"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡｜终于来到世界尽头❄️两日游攻略_15_田小吱_来自小红书网页版.jpg",
+                  "捷里别尔卡｜终于来到世界尽头❄️两日游攻略"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡｜终于来到世界尽头❄️两日游攻略_1_田小吱_来自小红书网页版.jpg",
+                  "捷里别尔卡｜终于来到世界尽头❄️两日游攻略"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡｜终于来到世界尽头❄️两日游攻略_4_田小吱_来自小红书网页版.jpg",
+                  "捷里别尔卡｜终于来到世界尽头❄️两日游攻略"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里别尔卡｜终于来到世界尽头❄️两日游攻略_7_田小吱_来自小红书网页版.jpg",
+                  "捷里别尔卡｜终于来到世界尽头❄️两日游攻略"
+            ],
+            [
+                  "D9-2月12日-捷里别尔卡/捷里封路没地方去？去摩尔曼斯克的孤独秋千_1_葡萄不淘_来自小红书网页版.jpg",
+                  "捷里封路没地方去？去摩尔曼斯克的孤独秋千"
+            ]
+      ]
+};
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.setAttribute('role','dialog');
+    lightbox.setAttribute('aria-modal','true');
+    lightbox.setAttribute('aria-label','目的地照片大图');
+    lightbox.innerHTML = '<button class="lightbox-close" type="button" aria-label="关闭">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="上一张">‹</button><figure class="lightbox-figure"><img alt=""><figcaption class="lightbox-caption"></figcaption><small class="lightbox-count"></small></figure><button class="lightbox-nav lightbox-next" type="button" aria-label="下一张">›</button>';
+    document.body.appendChild(lightbox);
+    let activeDay = '';
+    let activeIndex = 0;
+    const lightboxImage = lightbox.querySelector('img');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+    const lightboxCount = lightbox.querySelector('.lightbox-count');
+
+    function showPhoto(dayId,index){
+      const items = photoSets[dayId];
+      if(!items || !items.length) return;
+      activeDay = dayId;
+      activeIndex = (index + items.length) % items.length;
+      const item = items[activeIndex];
+      lightboxImage.src = item[0];
+      lightboxImage.alt = item[1];
+      lightboxCaption.textContent = item[1];
+      lightboxCount.textContent = (activeIndex + 1) + ' / ' + items.length;
+      lightbox.classList.add('open');
+      document.body.classList.add('lightbox-open');
+      lightbox.querySelector('.lightbox-close').focus();
+    }
+    function closePhoto(){
+      lightbox.classList.remove('open');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.removeAttribute('src');
+    }
+    function enableDrag(strip){
+      let down = false, startX = 0, startScroll = 0, moved = false;
+      strip.addEventListener('pointerdown',event=>{
+        if(event.pointerType !== 'mouse' || event.button !== 0) return;
+        down=true;
+        moved=false;
+        startX=event.clientX;
+        startScroll=strip.scrollLeft;
+        strip.classList.add('dragging');
+      });
+      strip.addEventListener('pointermove',event=>{if(!down)return;const delta=event.clientX-startX;if(Math.abs(delta)>5)moved=true;strip.scrollLeft=startScroll-delta});
+      const end=()=>{if(!down)return;down=false;strip.classList.remove('dragging')};
+      window.addEventListener('pointerup',end);
+      window.addEventListener('pointercancel',end);
+      strip.addEventListener('click',event=>{if(moved){event.preventDefault();event.stopPropagation();moved=false}},true);
+    }
+    Object.entries(photoSets).forEach(([dayId,items])=>{
+      const day = document.getElementById(dayId);
+      if(!day || !items.length) return;
+      const strip = day.querySelector('.photo-strip');
+      if(!strip) return;
+      strip.replaceChildren();
+      const folder = day.querySelector('.folder');
+      if(folder) folder.textContent += ' · ' + items.length + '张';
+      items.forEach((item,index)=>{
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'photo-button';
+        button.title = '点击查看大图';
+        button.setAttribute('aria-label','查看大图：'+item[1]);
+        const img = document.createElement('img');
+        img.src = item[0];
+        img.alt = item[1];
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.addEventListener('error',()=>button.remove());
+        const caption = document.createElement('span');
+        caption.textContent = item[1];
+        button.append(img,caption);
+        button.addEventListener('click',()=>showPhoto(dayId,index));
+        strip.appendChild(button);
+      });
+      enableDrag(strip);
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click',closePhoto);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>showPhoto(activeDay,activeIndex-1));
+    lightbox.querySelector('.lightbox-next').addEventListener('click',()=>showPhoto(activeDay,activeIndex+1));
+    lightbox.addEventListener('click',event=>{if(event.target===lightbox)closePhoto()});
+    document.addEventListener('keydown',event=>{
+      if(!lightbox.classList.contains('open')) return;
+      if(event.key==='Escape') closePhoto();
+      if(event.key==='ArrowLeft') showPhoto(activeDay,activeIndex-1);
+      if(event.key==='ArrowRight') showPhoto(activeDay,activeIndex+1);
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+  </script>
+</body>
+</html>
