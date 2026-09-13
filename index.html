@@ -43,16 +43,11 @@
     .section-lead { max-width:820px; margin:12px 0 30px; color:var(--ink-soft); }
     .route-card,.panel { padding:30px; border:1px solid var(--line); border-radius:24px; background:#fff; box-shadow:var(--shadow); }
     .route-card { margin-top:18px; }
-    .route-flow { display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr; align-items:center; gap:14px; margin-top:24px; }
+    .route-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); align-items:stretch; gap:14px; margin-top:24px; }
     .route-city { min-height:150px; padding:22px; border-radius:18px; background:var(--surface); }
     .route-city.primary { color:#fff; background:var(--blue); }
     .route-city b { display:block; margin-bottom:7px; font-size:20px; }
     .route-city span { display:block; font-size:13px; opacity:.76; }
-    .route-arrow { color:var(--blue); font-size:28px; font-weight:800; }
-    .trip-overview { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
-    .overview-step { min-height:132px; padding:18px; border-radius:16px; background:var(--surface); }
-    .overview-step b { display:block; margin-bottom:8px; color:var(--blue); font-size:14px; }
-    .overview-step span { color:var(--ink-soft); font-size:13px; line-height:1.5; }
     .day-nav { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-top:18px; }
     .day-nav a { padding:11px 8px; border:1px solid var(--line); border-radius:13px; color:var(--ink); background:#fff; text-align:center; text-decoration:none; }
     .day-nav b,.day-nav span { display:block; }
@@ -128,14 +123,14 @@
     .sources { display:grid; grid-template-columns:repeat(2,1fr); gap:10px 18px; margin:0; padding:0; list-style:none; }
     .sources li { padding:13px 15px; border:1px solid var(--line); border-radius:13px; font-size:13px; }
     footer { margin-top:86px; padding:38px 0; color:#ccd1ec; background:var(--deep); text-align:center; font-size:12px; }
-    @media(max-width:900px){.route-flow{grid-template-columns:1fr}.route-arrow{transform:rotate(90deg);text-align:center}.trip-overview{grid-template-columns:repeat(2,1fr)}.day-body{grid-template-columns:1fr}.day-nav{grid-template-columns:repeat(4,1fr)}.todo-grid{grid-template-columns:1fr}.sources{grid-template-columns:1fr}}
-    @media(max-width:680px){.wrap{width:min(100% - 28px,1180px)}.hero{padding:58px 0 42px}.flight-grid,.stats{grid-template-columns:1fr}.day-head{grid-template-columns:78px 1fr;gap:14px;padding:22px 18px}.date{width:74px}.day-title h3{font-size:22px}.pace{grid-column:1/-1;text-align:left}.day-body{padding:22px 18px}.gallery{padding:0 18px 22px}.photo-button{flex-basis:78%;min-width:220px}.lightbox{padding:16px}.lightbox-nav{top:auto;bottom:18px;width:44px;height:44px;border-radius:50%;transform:none}.lightbox-prev{left:calc(50% - 54px)}.lightbox-next{right:calc(50% - 54px)}.day-nav{grid-template-columns:repeat(3,1fr)}.trip-overview{grid-template-columns:1fr}.toolbar .print{margin-left:0}}
+    @media(max-width:900px){.route-flow{grid-template-columns:repeat(2,1fr)}.day-body{grid-template-columns:1fr}.day-nav{grid-template-columns:repeat(4,1fr)}.todo-grid{grid-template-columns:1fr}.sources{grid-template-columns:1fr}}
+    @media(max-width:680px){.wrap{width:min(100% - 28px,1180px)}.hero{padding:58px 0 42px}.flight-grid,.stats,.route-flow{grid-template-columns:1fr}.day-head{grid-template-columns:78px 1fr;gap:14px;padding:22px 18px}.date{width:74px}.day-title h3{font-size:22px}.pace{grid-column:1/-1;text-align:left}.day-body{padding:22px 18px}.gallery{padding:0 18px 22px}.photo-button{flex-basis:78%;min-width:220px}.lightbox{padding:16px}.lightbox-nav{top:auto;bottom:18px;width:44px;height:44px;border-radius:50%;transform:none}.lightbox-prev{left:calc(50% - 54px)}.lightbox-next{right:calc(50% - 54px)}.day-nav{grid-template-columns:repeat(3,1fr)}.toolbar .print{margin-left:0}}
     @media print{@page{size:A4;margin:12mm}.toolbar,.gallery,footer{display:none!important}.wrap{width:100%}.hero{padding:10mm 0}.day{break-inside:avoid}.day-head{padding:14px}.day-body{padding:16px;grid-template-columns:1.5fr .7fr}section{padding-top:8mm}}
   </style>
 </head>
 <body id="top">
   <nav class="toolbar" aria-label="页面导航"><div class="wrap toolbar-inner">
-    <a href="#route">路线地图</a><a href="#overview">路线总览</a><a href="#days">每日行程</a><a href="#hours">开放时间</a><a href="#todo">预订清单</a><a href="#sources">核对入口</a>
+    <a href="#route">路线总览</a><a href="#days">每日行程</a><a href="#hours">开放时间</a><a href="#todo">预订清单</a><a href="#sources">核对入口</a>
     <button class="print" type="button" onclick="window.print()">打印 / 存为 PDF</button>
   </div></nav>
 
@@ -151,31 +146,20 @@
       <div class="stat"><b>13 天</b><span>2/4—2/16</span></div><div class="stat"><b>3 天请假</b><span>2/4、2/15、2/16</span></div><div class="stat"><b>4 个目的地</b><span>城市、人文与北极圈</span></div><div class="stat"><b>2 次追光</b><span>降低天气不确定性</span></div>
     </div>
     <div class="route-card" id="route">
-      <h2>路线地图</h2><p class="section-lead">深圳往返莫斯科，中间采用高铁与两段国内航班，避免从摩尔曼斯克折返圣彼得堡。</p>
+      <h2>路线总览</h2><p class="section-lead">深圳往返莫斯科，中间采用高铁与两段国内航班，避免从摩尔曼斯克折返圣彼得堡。行程按闭馆日反向安排：周五进入克里姆林宫，周二完整留给冬宫；圣彼得堡大马戏团与马林斯基分置两个夜晚。</p>
       <div class="route-flow">
-        <div class="route-city primary"><b>莫斯科</b><span>2/4—2/7<br>红场、克里姆林宫、画廊与演出</span></div><div class="route-arrow">→</div>
-        <div class="route-city"><b>圣彼得堡</b><span>2/7—2/11<br>冬宫深度游、教堂与马林斯基</span></div><div class="route-arrow">→</div>
-        <div class="route-city"><b>摩尔曼斯克</b><span>2/11—2/14<br>极光、雪地项目与列宁号</span></div><div class="route-arrow">→</div>
+        <div class="route-city primary"><b>莫斯科</b><span>2/4—2/7<br>红场、克里姆林宫、武装力量大教堂、高尔基故居、特列季亚科夫与莫斯科大剧院</span></div>
+        <div class="route-city"><b>圣彼得堡</b><span>2/7—2/11<br>动物博物馆、圣以撒、冬宫、城市教堂、圣彼得堡大马戏团与马林斯基</span></div>
+        <div class="route-city"><b>摩尔曼斯克</b><span>2/11—2/14<br>捷里别尔卡、哈士奇、萨米文化、两次追光与列宁号</span></div>
         <div class="route-city primary"><b>莫斯科</b><span>2/14—2/15<br>地铁巡游后返程</span></div>
+      </div>
+      <div class="day-nav" aria-label="跳转到每日行程">
+        <a href="#d1"><b>2/4</b><span>抵达</span></a><a href="#d2"><b>2/5</b><span>克里姆林宫</span></a><a href="#d3"><b>2/6</b><span>高尔基·教堂</span></a><a href="#d4"><b>2/7</b><span>画廊与高铁</span></a><a href="#d5"><b>2/8</b><span>动物·圣以撒·马戏</span></a><a href="#d6"><b>2/9</b><span>冬宫</span></a><a href="#d7"><b>2/10</b><span>城市·马林斯基</span></a><a href="#d8"><b>2/11</b><span>滴血与飞行</span></a><a href="#d9"><b>2/12</b><span>捷里别尔卡</span></a><a href="#d10"><b>2/13</b><span>雪地项目</span></a><a href="#d11"><b>2/14</b><span>列宁号</span></a><a href="#d12"><b>2/15</b><span>地铁返程</span></a><a href="#d13"><b>2/16</b><span>抵达深圳</span></a>
       </div>
     </div>
   </div></header>
 
   <main>
-    <section id="overview"><div class="wrap">
-      <h2>路线总览</h2><p class="section-lead">用闭馆日反向排程：周五参观克里姆林宫，周日完成高尔基故居和特列季亚科夫；圣彼得堡把周二完整留给冬宫，周三只安排正常开放的喀山大教堂与城市漫步。</p>
-      <div class="panel"><div class="trip-overview">
-        <div class="overview-step"><b>01 · 莫斯科核心</b><span>红场、克里姆林宫、圣瓦西里、救世主大教堂</span></div>
-        <div class="overview-step"><b>02 · 莫斯科人文</b><span>武装力量大教堂、高尔基故居、特列季亚科夫</span></div>
-        <div class="overview-step"><b>03 · 圣彼得堡</b><span>动物博物馆、圣以撒、冬宫、滴血教堂</span></div>
-        <div class="overview-step"><b>04 · 北极圈</b><span>捷里别尔卡、哈士奇、萨米文化、两次追光</span></div>
-        <div class="overview-step"><b>05 · 顺路返程</b><span>列宁号后直飞莫斯科，次日地铁巡游</span></div>
-      </div></div>
-      <div class="day-nav" aria-label="跳转到每日行程">
-        <a href="#d1"><b>2/4</b><span>抵达</span></a><a href="#d2"><b>2/5</b><span>克里姆林宫</span></a><a href="#d3"><b>2/6</b><span>武装力量</span></a><a href="#d4"><b>2/7</b><span>艺术与高铁</span></a><a href="#d5"><b>2/8</b><span>动物与圣以撒</span></a><a href="#d6"><b>2/9</b><span>冬宫</span></a><a href="#d7"><b>2/10</b><span>城市漫步</span></a><a href="#d8"><b>2/11</b><span>滴血与飞行</span></a><a href="#d9"><b>2/12</b><span>捷里别尔卡</span></a><a href="#d10"><b>2/13</b><span>雪地项目</span></a><a href="#d11"><b>2/14</b><span>列宁号</span></a><a href="#d12"><b>2/15</b><span>地铁返程</span></a><a href="#d13"><b>2/16</b><span>抵达深圳</span></a>
-      </div>
-    </div></section>
-
     <section id="days"><div class="wrap"><h2>每日行程</h2><p class="section-lead">时间均为当地时间。冬季路况、安检和机场交通已经留出缓冲，演出时段待节目表公布后锁定。</p><div class="timeline">
 
       <article class="day" id="d1">
@@ -195,27 +179,27 @@
       </article>
 
       <article class="day" id="d3">
-        <div class="day-head"><div class="date"><b>2/6</b><span>周六 · D3</span></div><div class="day-title"><h3>武装力量大教堂 · 尼库林马戏团</h3><p>市中心 → 爱国者公园 → 道路记忆博物馆 → 市中心</p></div><div class="pace"><b>中等</b><span>远郊往返约3小时</span></div></div>
-        <div class="day-body"><div><div class="chips"><span class="chip">55–65公里</span><span class="chip">道路记忆</span><span class="chip">马戏团</span></div><ol class="agenda">
-          <li><time>08:30</time><div><b>从市中心出发</b><p>单程约1.5小时，冬季按2小时准备。</p></div></li><li><time>10:00</time><div><b>武装力量大教堂</b><p>内部与广场参观约1.5小时。</p></div></li><li><time>11:30</time><div><b>道路记忆博物馆</b><p>参观至13:30，随后简餐、返回市区。</p></div></li><li><time>19:00</time><div><b>尼库林马戏团</b><p>保留莫斯科场，避免给圣彼得堡增加负担。</p></div></li>
-        </ol></div><aside class="side"><div class="callout ice"><span class="tag">交通</span><h4>建议包车或一日团</h4><p>远郊公共交通换乘复杂，冬季天黑早，包车更稳定。</p></div></aside></div>
-        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>军事建筑与演出 · 目的地影集</h4><span class="folder">D3-2月6日-武装力量大教堂</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>武装力量大教堂</b>待添加图片</span></div><div class="photo-placeholder"><span><b>道路记忆</b>待添加图片</span></div><div class="photo-placeholder"><span><b>尼库林马戏团</b>待添加图片</span></div></div></div></div>
+        <div class="day-head"><div class="date"><b>2/6</b><span>周六 · D3</span></div><div class="day-title"><h3>高尔基故居 · 武装力量大教堂日落</h3><p>高尔基故居 → 市中心午餐 → 爱国者公园 → 教堂内外 → 日落与夜景</p></div><div class="pace"><b>舒适</b><span>上午市内 + 下午远郊</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">高尔基故居10:00</span><span class="chip">55–65公里</span><span class="chip">17:17日落</span><span class="chip">教堂开放至21:00</span></div><ol class="agenda">
+          <li><time>10:00</time><div><b>高尔基故居博物馆</b><p>从红场一带打车约10–20分钟；参观约1.5小时，重点看谢赫特尔设计的新艺术风格楼梯、彩窗与室内陈设。</p></div></li><li><time>11:30</time><div><b>午餐与上车准备</b><p>在故居或酒店附近用餐；建议包车提前到场，随身只带下午需要的摄影器材和保暖用品。</p></div></li><li><time>12:30</time><div><b>包车前往武装力量大教堂</b><p>从市中心向西进入明斯克公路，约60–65公里；通常1.5小时左右，冬季按2小时预留。</p></div></li><li><time>14:30</time><div><b>抵达、热饮与机位勘察</b><p>预留约30分钟处理停车、步行和保暖；若提前抵达，可先绕广场寻找傍晚拍摄角度。</p></div></li><li><time>15:00</time><div><b>教堂外观与广场（日间）</b><p>先用约40分钟拍摄建筑全景、台阶、穹顶与马赛克细节，避免日落后才第一次寻找机位。</p></div></li><li><time>15:40</time><div><b>上层与下层教堂</b><p>内部参观约1小时；遇礼拜时避开核心区域、关闭闪光灯并听从现场安排。</p></div></li><li><time>16:45</time><div><b>日落、蓝调与亮灯夜景</b><p>2月6日预计17:17日落、17:56左右结束民用暮光。建议留到18:10左右，可依次拍到暖色落日、蓝调时刻与建筑灯光。</p></div></li><li><time>18:15</time><div><b>返回莫斯科市中心</b><p>教堂常规开放至21:00，不需要卡闭馆时间；冬季返程按1.5–2小时准备，约20:00抵达酒店。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><span class="tag">拍摄重点</span><h4>不要把“夜景”误当成很晚</h4><p>莫斯科二月天黑很早，黄金拍摄窗口约为16:50–18:10。当天只参观教堂，不加入道路记忆、胜利之地或坦克博物馆。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>新艺术建筑与军事教堂 · 目的地影集</h4><span class="folder">D3-2月6日-武装力量大教堂</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>高尔基故居</b>待添加图片</span></div><div class="photo-placeholder"><span><b>教堂日落</b>待添加图片</span></div><div class="photo-placeholder"><span><b>教堂夜景</b>待添加图片</span></div></div></div></div>
       </article>
 
       <article class="day" id="d4">
-        <div class="day-head"><div class="date"><b>2/7</b><span>周日 · D4</span></div><div class="day-title"><h3>高尔基故居 · 特列季亚科夫 · 高铁北上</h3><p>高尔基故居 → 特列季亚科夫画廊 → 列宁格勒站 → 圣彼得堡</p></div><div class="pace"><b>中等</b><span>两馆 + 一段高铁</span></div></div>
-        <div class="day-body"><div><div class="chips"><span class="chip">高尔基10:00</span><span class="chip">画廊3小时</span><span class="chip">晚间高铁</span></div><ol class="agenda">
-          <li><time>10:00</time><div><b>高尔基故居博物馆</b><p>参观约90分钟，入口在斯皮里多诺夫卡街一侧。</p></div></li><li><time>12:15</time><div><b>特列季亚科夫画廊</b><p>两地约3.5–4公里，打车15–25分钟；画廊预留约3小时。</p></div></li><li><time>16:00</time><div><b>前往列宁格勒火车站</b><p>约4–5公里，预留40分钟和进站时间。</p></div></li><li><time>17:30+</time><div><b>高铁前往圣彼得堡</b><p>优先选择抵达不晚于22:30的车次。</p></div></li>
-        </ol></div><aside class="side"><div class="callout important"><h4>门票节奏</h4><p>高尔基故居通常只提前约三周放票；画廊建议提前选定入场时段。</p></div></aside></div>
-        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>文学与艺术 · 目的地影集</h4><span class="folder">D4-2月7日-莫斯科至圣彼得堡</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>高尔基故居</b>待添加图片</span></div><div class="photo-placeholder"><span><b>特列季亚科夫</b>待添加图片</span></div><div class="photo-placeholder"><span><b>俄铁高铁</b>待添加图片</span></div></div></div></div>
+        <div class="day-head"><div class="date"><b>2/7</b><span>周日 · D4</span></div><div class="day-title"><h3>特列季亚科夫画廊 · 提前高铁北上</h3><p>特列季亚科夫画廊 → 列宁格勒站 → 圣彼得堡</p></div><div class="pace"><b>舒适</b><span>一馆 + 一段高铁</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">画廊10:00</span><span class="chip">深度参观3小时</span><span class="chip">15:10–15:40高铁</span></div><ol class="agenda">
+          <li><time>09:45</time><div><b>抵达特列季亚科夫画廊</b><p>提前到入口等待安检；行李留在酒店，参观结束后由包车取行李或提前送至车站寄存。</p></div></li><li><time>10:00</time><div><b>特列季亚科夫画廊</b><p>预留约3小时，重点看俄罗斯圣像画、巡回画派及列宾、苏里科夫等作品。</p></div></li><li><time>13:00</time><div><b>简餐并前往列宁格勒火车站</b><p>约5–6公里，打车通常25–40分钟；冬季按60分钟转场，最迟14:00前抵达车站。</p></div></li><li><time>15:10–15:40</time><div><b>萨普桑前往圣彼得堡</b><p>目标选择下午较早班次，运行约4小时，预计19:10–19:40抵达莫斯科火车站；以2027年正式运行图为准。</p></div></li><li><time>20:15</time><div><b>入住圣彼得堡酒店</b><p>从莫斯科火车站前往涅瓦大街或海军部一带，地铁或打车约15–30分钟；当晚只安排晚餐和休息。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><h4>购票目标</h4><p>优先抢15:10–15:40档萨普桑，不再等待17:30班次。大部分车次预计2026年11月9日开放销售，最终时间以俄铁为准。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>俄罗斯艺术与高铁北上 · 目的地影集</h4><span class="folder">D4-2月7日-莫斯科至圣彼得堡</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>特列季亚科夫</b>待添加图片</span></div><div class="photo-placeholder"><span><b>萨普桑</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣彼得堡初见</b>待添加图片</span></div></div></div></div>
       </article>
 
       <article class="day" id="d5">
-        <div class="day-head"><div class="date"><b>2/8</b><span>周一 · D5</span></div><div class="day-title"><h3>动物博物馆 · 圣以撒大教堂</h3><p>瓦西里岛 → 宫桥 → 圣以撒广场</p></div><div class="pace"><b>中等</b><span>两点相距约2公里</span></div></div>
-        <div class="day-body"><div><div class="chips"><span class="chip">动物博物馆11:00</span><span class="chip">圣以撒14:45</span><span class="chip">柱廊可选</span></div><ol class="agenda">
-          <li><time>11:00</time><div><b>俄罗斯科学院动物博物馆</b><p>预留2.5小时，重点看鲸类、猛犸象和大型动物标本。</p></div></li><li><time>13:30</time><div><b>午餐与转场</b><p>打车10–15分钟；步行约25–30分钟，但冬季过桥风大。</p></div></li><li><time>14:45</time><div><b>圣以撒大教堂</b><p>内部约90分钟；体力和天气允许时16:15登柱廊。</p></div></li>
-        </ol></div><aside class="side"><div class="callout flex"><span class="tag">闭馆规避</span><h4>动物馆不能挪到周二</h4><p>动物博物馆周二闭馆；圣以撒周三闭馆，因此周一组合最稳。</p></div></aside></div>
-        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>自然史与穹顶 · 目的地影集</h4><span class="folder">D5-2月8日-动物博物馆与圣以撒</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>动物博物馆</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣以撒内部</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣以撒柱廊</b>待添加图片</span></div></div></div></div>
+        <div class="day-head"><div class="date"><b>2/8</b><span>周一 · D5</span></div><div class="day-title"><h3>动物博物馆 · 圣以撒 · 圣彼得堡大马戏团</h3><p>瓦西里岛 → 圣以撒广场 → 酒店休息 → 丰坦卡河畔马戏团</p></div><div class="pace"><b>中等</b><span>白天两馆 + 晚间演出</span></div></div>
+        <div class="day-body"><div><div class="chips"><span class="chip">动物博物馆11:00</span><span class="chip">圣以撒14:45</span><span class="chip">大马戏19:00暂定</span></div><ol class="agenda">
+          <li><time>11:00</time><div><b>俄罗斯科学院动物博物馆</b><p>预留2.5小时，重点看鲸类、猛犸象和大型动物标本。</p></div></li><li><time>13:30</time><div><b>午餐与转场</b><p>到圣以撒约2公里；打车10–15分钟，冬季不建议顶风步行过桥。</p></div></li><li><time>14:45</time><div><b>圣以撒大教堂</b><p>内部约90分钟。若当晚马戏19:00开演，柱廊改为可选，最晚16:30离开。</p></div></li><li><time>16:45</time><div><b>回酒店休息 / 提前晚餐</b><p>保留约1.5小时恢复体力，不在下午继续叠加景点。</p></div></li><li><time>18:20</time><div><b>前往圣彼得堡大马戏团</b><p>位于丰坦卡河堤岸3号；从圣以撒一带约2.5–3公里，打车通常15–25分钟，提前30分钟入场。</p></div></li><li><time>19:00</time><div><b>圣彼得堡大马戏团</b><p>场次以2027年正式节目表为准，演出通常预留约2–2.5小时。</p></div></li>
+        </ol></div><aside class="side"><div class="callout flex"><span class="tag">两晚演出</span><h4>2/8马戏、2/10马林斯基</h4><p>这是最不挤压冬宫的组合。若节目排期相反，只互换两个夜场，白天路线保持不动。</p></div></aside></div>
+        <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>自然史、穹顶与马戏 · 目的地影集</h4><span class="folder">D5-2月8日-动物博物馆与圣以撒</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>动物博物馆</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣以撒内部</b>待添加图片</span></div><div class="photo-placeholder"><span><b>圣彼得堡大马戏团</b>待添加图片</span></div></div></div></div>
       </article>
 
       <article class="day" id="d6">
@@ -229,8 +213,8 @@
       <article class="day" id="d7">
         <div class="day-head"><div class="date"><b>2/10</b><span>周三 · D7</span></div><div class="day-title"><h3>喀山大教堂 · 涅瓦大街 · 马林斯基</h3><p>喀山大教堂 → 百年书店 → 格里博耶多夫运河 → 涅瓦大街 → 剧院</p></div><div class="pace"><b>舒适</b><span>周三闭馆规避日</span></div></div>
         <div class="day-body"><div><div class="chips"><span class="chip">喀山大教堂</span><span class="chip">城市漫步</span><span class="chip">马林斯基剧院</span></div><ol class="agenda">
-          <li><time>09:30</time><div><b>喀山大教堂</b><p>正常使用的宗教场所，周三开放；参观时避开礼拜核心区域。</p></div></li><li><time>10:15</time><div><b>百年书店 / 歌手之家</b><p>就在喀山大教堂对面，步行约3分钟。</p></div></li><li><time>11:00</time><div><b>格里博耶多夫运河沿岸</b><p>只做冬季步行，不安排运河或涅瓦河游船；顺路看滴血教堂外观。</p></div></li><li><time>13:30</time><div><b>涅瓦大街慢逛</b><p>把下午留给咖啡、购物和休息。</p></div></li><li><time>19:00</time><div><b>马林斯基剧院</b><p>节目公布后优先锁定本晚；若无合适节目，可改2月8日晚。</p></div></li>
-        </ol></div><aside class="side"><div class="callout important"><h4>不要安排两座收费教堂</h4><p>圣以撒和滴血教堂的博物馆部分周三都闭馆，只看外观即可。</p></div></aside></div>
+          <li><time>09:30</time><div><b>喀山大教堂</b><p>正常使用的宗教场所，周三开放；参观时避开礼拜核心区域。</p></div></li><li><time>10:15</time><div><b>百年书店 / 歌手之家</b><p>就在喀山大教堂对面，步行约3分钟。</p></div></li><li><time>11:00</time><div><b>格里博耶多夫运河沿岸</b><p>只做冬季步行，不安排运河或涅瓦河游船；顺路看滴血教堂外观。</p></div></li><li><time>13:30</time><div><b>涅瓦大街慢逛</b><p>把下午留给咖啡、购物和休息。</p></div></li><li><time>16:30</time><div><b>回酒店休息 / 提前晚餐</b><p>从涅瓦大街返回酒店，给晚间演出留出换装和用餐时间。</p></div></li><li><time>18:15</time><div><b>前往马林斯基剧院</b><p>从涅瓦大街中段约3–4公里，打车通常15–25分钟；订票时确认历史舞台、马林斯基II或音乐厅的具体地址。</p></div></li><li><time>19:00</time><div><b>马林斯基剧院</b><p>优先锁定歌剧或芭蕾；具体时间与场馆以2027年正式节目表为准。</p></div></li>
+        </ol></div><aside class="side"><div class="callout important"><h4>白天只做轻量城市漫步</h4><p>圣以撒和滴血教堂的博物馆部分周三闭馆；下午主动休息，避免带着疲劳进入马林斯基。</p></div></aside></div>
         <div class="gallery"><div class="gallery-inner"><div class="gallery-head"><h4>圣彼得堡城市漫步 · 目的地影集</h4><span class="folder">D7-2月10日-圣彼得堡城市漫步</span></div><div class="photo-strip"><div class="photo-placeholder"><span><b>喀山大教堂</b>待添加图片</span></div><div class="photo-placeholder"><span><b>百年书店</b>待添加图片</span></div><div class="photo-placeholder"><span><b>马林斯基剧院</b>待添加图片</span></div></div></div></div>
       </article>
 
@@ -287,14 +271,16 @@
         <tr><td><b>克里姆林宫 / 武器库</b></td><td>2/5 周五</td><td>建筑群冬季10:00–17:00；武器库10:00–18:00；周四闭馆</td><td>可行</td></tr>
         <tr><td><b>圣瓦西里大教堂</b></td><td>2/5 周五 14:15</td><td>冬季通常11:00–17:00；每月首个周三闭馆</td><td>可行</td></tr>
         <tr><td><b>救世主大教堂</b></td><td>2/5 周五 15:45</td><td>通常10:00–18:00；周一13:00开放</td><td>可行</td></tr>
-        <tr><td><b>武装力量大教堂</b></td><td>2/6 周六</td><td>教堂每日08:00–21:00；道路记忆周一维护</td><td>可行</td></tr>
-        <tr><td><b>高尔基故居</b></td><td>2/7 周日</td><td>周三至周日10:00–18:00；周一、周二闭馆</td><td>可行</td></tr>
+        <tr><td><b>高尔基故居</b></td><td>2/6 周六 10:00</td><td>周三至周日10:00–18:00；周一、周二闭馆</td><td>可行；参观后直接包车出城</td></tr>
+        <tr><td><b>武装力量大教堂</b></td><td>2/6 周六 15:00–18:15</td><td>教堂每日08:00–21:00；2/6预计17:17日落、17:54左右暮光结束；礼拜安排需另行确认</td><td>适合日落与亮灯夜景</td></tr>
         <tr><td><b>特列季亚科夫画廊</b></td><td>2/7 周日</td><td>周二至周日10:00–21:00；周一闭馆</td><td>可行</td></tr>
         <tr><td><b>动物博物馆</b></td><td>2/8 周一</td><td>11:00–19:00；周二、冬季第二个周三闭馆</td><td>可行</td></tr>
         <tr><td><b>圣以撒大教堂</b></td><td>2/8 周一</td><td>10:00–18:00；17:30停止入场；周三闭馆</td><td>可行</td></tr>
         <tr><td><b>冬宫主馆</b></td><td>2/9 周二</td><td>周二、周五、周六11:00–20:00；周一闭馆</td><td>最理想</td></tr>
         <tr><td><b>喀山大教堂</b></td><td>2/10 周三</td><td>周一至周六09:00至晚间礼拜后；每日开放</td><td>可行</td></tr>
         <tr><td><b>滴血教堂</b></td><td>2/11 周四</td><td>10:00–18:00；17:30停止入场；周三闭馆</td><td>可行</td></tr>
+        <tr><td><b>圣彼得堡大马戏团</b></td><td>2/8 周一 晚间</td><td>无固定每日场次；以官网2027年2月节目表为准</td><td>优先本晚，必要时与马林斯基互换</td></tr>
+        <tr><td><b>马林斯基剧院</b></td><td>2/10 周三 晚间</td><td>按节目与舞台售票；须核对历史舞台、马林斯基II或音乐厅</td><td>优先本晚，必要时与大马戏互换</td></tr>
         <tr><td><b>列宁号</b></td><td>2/14 周日 上午</td><td>固定实名场次；必须跟团；具体2027场次待发布</td><td>只订上午场</td></tr>
       </tbody>
     </table></div></div></section>
@@ -302,14 +288,14 @@
     <section id="todo"><div class="wrap"><h2>预订清单</h2><p class="section-lead">先处理容量小、固定时段和影响全程结构的项目。</p><div class="todo-grid">
       <div class="todo"><h3>第一优先级</h3><ul><li>深圳—莫斯科往返机票</li><li>2/11 圣彼得堡—摩尔曼斯克</li><li>2/14 摩尔曼斯克—莫斯科</li><li>莫斯科—圣彼得堡高铁</li></ul></div>
       <div class="todo"><h3>固定时段门票</h3><ul><li>克里姆林宫武器库10:00场</li><li>列宁号10:30或12:00场</li><li>冬宫周二入场票</li><li>高尔基故居与动物博物馆</li></ul></div>
-      <div class="todo"><h3>演出与冬季项目</h3><ul><li>莫斯科大剧院节目表</li><li>尼库林马戏团</li><li>马林斯基剧院</li><li>捷里别尔卡、雪地组合团、两晚极光团</li></ul></div>
+      <div class="todo"><h3>演出与冬季项目</h3><ul><li>莫斯科大剧院节目表</li><li>圣彼得堡大马戏团：优先2/8晚</li><li>马林斯基剧院：优先2/10晚</li><li>捷里别尔卡、雪地组合团、两晚极光团</li></ul></div>
       <div class="todo"><h3>住宿区域</h3><ul><li>莫斯科：红场 / 剧院广场附近</li><li>圣彼得堡：涅瓦大街 / 海军部附近</li><li>摩尔曼斯克：五角广场附近</li><li>2/14晚仍住莫斯科市中心</li></ul></div>
       <div class="todo"><h3>冬季装备</h3><ul><li>防风防水外层与保暖中层</li><li>防滑雪地靴、羊毛袜、暖宝宝</li><li>相机备用电池与充电宝</li><li>室内外温差下的可拆穿搭</li></ul></div>
-      <div class="todo"><h3>出发前复核</h3><ul><li>出发前14天核对全部闭馆公告</li><li>确认三个剧院实际开演时间</li><li>查看捷里别尔卡道路状态</li><li>确认返程机场与机场快线</li></ul></div>
+      <div class="todo"><h3>出发前复核</h3><ul><li>出发前14天核对全部闭馆公告</li><li>确认莫斯科大剧院、圣彼得堡大马戏团与马林斯基的节目和场馆</li><li>查看捷里别尔卡道路状态</li><li>确认返程机场与机场快线</li></ul></div>
     </div></div></section>
 
     <section id="sources"><div class="wrap"><h2>官方核对入口</h2><p class="section-lead">门票开放后以官网售票日历为最终依据。</p><ul class="sources">
-      <li><a href="https://kreml.ru/ru/guide" target="_blank" rel="noopener">莫斯科克里姆林宫博物馆</a></li><li><a href="https://shm.ru/museum/hvb/" target="_blank" rel="noopener">圣瓦西里大教堂</a></li><li><a href="https://xxc.ru/contacts/" target="_blank" rel="noopener">救世主大教堂</a></li><li><a href="https://1418museum.ru/faq/" target="_blank" rel="noopener">武装力量大教堂与道路记忆</a></li><li><a href="https://museum.imli.ru/" target="_blank" rel="noopener">高尔基故居博物馆</a></li><li><a href="https://www.tretyakovgallery.ru/for-visitors/museums/istoricheskoe-zdanie/" target="_blank" rel="noopener">特列季亚科夫画廊</a></li><li><a href="https://www.hermitagemuseum.org/visitus/" target="_blank" rel="noopener">冬宫 / 艾尔米塔什博物馆</a></li><li><a href="https://www.cathedral.ru/ru/visitors/time" target="_blank" rel="noopener">圣以撒与滴血教堂</a></li><li><a href="https://www.zin.ru/museum/info.html" target="_blank" rel="noopener">俄罗斯科学院动物博物馆</a></li><li><a href="https://kazansky-spb.ru/texts/history" target="_blank" rel="noopener">喀山大教堂</a></li><li><a href="https://www.rosatomflot.ru/atomnyy-ledokol-lenin/grafik-raboty/" target="_blank" rel="noopener">列宁号官方场次</a></li>
+      <li><a href="https://kreml.ru/ru/guide" target="_blank" rel="noopener">莫斯科克里姆林宫博物馆</a></li><li><a href="https://shm.ru/museum/hvb/" target="_blank" rel="noopener">圣瓦西里大教堂</a></li><li><a href="https://xxc.ru/contacts/" target="_blank" rel="noopener">救世主大教堂</a></li><li><a href="https://www.ghvs.ru/contacts/" target="_blank" rel="noopener">武装力量大教堂开放时间</a></li><li><a href="https://museum.imli.ru/" target="_blank" rel="noopener">高尔基故居博物馆</a></li><li><a href="https://www.tretyakovgallery.ru/for-visitors/museums/istoricheskoe-zdanie/" target="_blank" rel="noopener">特列季亚科夫画廊</a></li><li><a href="https://www.hermitagemuseum.org/visitus/" target="_blank" rel="noopener">冬宫 / 艾尔米塔什博物馆</a></li><li><a href="https://www.cathedral.ru/ru/visitors/time" target="_blank" rel="noopener">圣以撒与滴血教堂</a></li><li><a href="https://www.zin.ru/museum/info.html" target="_blank" rel="noopener">俄罗斯科学院动物博物馆</a></li><li><a href="https://kazansky-spb.ru/texts/history" target="_blank" rel="noopener">喀山大教堂</a></li><li><a href="https://www.circus.spb.ru/" target="_blank" rel="noopener">圣彼得堡大马戏团节目表</a></li><li><a href="https://www.mariinsky.ru/en/playbill/playbill/" target="_blank" rel="noopener">马林斯基剧院节目表</a></li><li><a href="https://www.rosatomflot.ru/atomnyy-ledokol-lenin/grafik-raboty/" target="_blank" rel="noopener">列宁号官方场次</a></li>
     </ul></div></section>
   </main>
 
@@ -393,10 +379,6 @@
             ]
       ],
       "d11": [
-            [
-                  "D11-2月14日-列宁号至莫斯科/МУРМАНСК｜来到北极圈内的不冻港_1_QISIWOLA_来自小红书网页版.jpg",
-                  "МУРМАНСК｜来到北极圈内的不冻港"
-            ],
             [
                   "D11-2月14日-列宁号至莫斯科/МУРМАНСК｜来到北极圈内的不冻港_2_QISIWOLA_来自小红书网页版.jpg",
                   "МУРМАНСК｜来到北极圈内的不冻港"
@@ -548,10 +530,6 @@
                   "武装力量大教堂丨俄式硬核军事美学，超震撼"
             ],
             [
-                  "D3-2月6日-武装力量大教堂/莫斯科尼库林马戏团_1_老兄我醒着_来自小红书网页版.jpg",
-                  "莫斯科尼库林马戏团"
-            ],
-            [
                   "D3-2月6日-武装力量大教堂/莫斯科最值得去的教堂⛪️_1_寞盒子_来自小红书网页版.jpg",
                   "莫斯科最值得去的教堂⛪️"
             ],
@@ -562,28 +540,28 @@
             [
                   "D3-2月6日-武装力量大教堂/莫斯科最值得去的教堂⛪️_8_寞盒子_来自小红书网页版.jpg",
                   "莫斯科最值得去的教堂⛪️"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/曲线的艺术，来自俄罗斯的Art Nouveau_1_毛手手_来自小红书网页版.jpg",
+                  "高尔基故居｜新艺术风格"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/曲线的艺术，来自俄罗斯的Art Nouveau_2_毛手手_来自小红书网页版.jpg",
+                  "高尔基故居｜新艺术风格"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/曲线的艺术，来自俄罗斯的Art Nouveau_6_毛手手_来自小红书网页版.jpg",
+                  "高尔基故居｜新艺术风格"
+            ],
+            [
+                  "D3-2月6日-武装力量大教堂/莫斯科Art Nouveau｜现代主义中的梦中楼梯_3_Ruby_来自小红书网页版.jpg",
+                  "高尔基故居｜梦中楼梯"
             ]
       ],
       "d4": [
             [
-                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_1_毛手手_来自小红书网页版.jpg",
-                  "曲线的艺术，来自俄罗斯的Art Nouveau"
-            ],
-            [
-                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_2_毛手手_来自小红书网页版.jpg",
-                  "曲线的艺术，来自俄罗斯的Art Nouveau"
-            ],
-            [
-                  "D4-2月7日-莫斯科至圣彼得堡/曲线的艺术，来自俄罗斯的Art Nouveau_6_毛手手_来自小红书网页版.jpg",
-                  "曲线的艺术，来自俄罗斯的Art Nouveau"
-            ],
-            [
-                  "D4-2月7日-莫斯科至圣彼得堡/莫斯科Art Nouveau｜现代主义中的梦中楼梯_3_Ruby_来自小红书网页版.jpg",
-                  "莫斯科Art Nouveau｜现代主义中的梦中楼梯"
-            ],
-            [
                   "D4-2月7日-莫斯科至圣彼得堡/莫斯科旅行攻略｜带你玩转俄式浪漫_6_俄罗斯旅游定制师Linna_来自小红书网页版.jpg",
-                  "莫斯科旅行攻略｜带你玩转俄式浪漫"
+                  "特列季亚科夫画廊"
             ]
       ],
       "d5": [
